@@ -33,9 +33,10 @@ bool Game::Start()
 }
 void Game::Update()
 {
-	/*if (Pad(0).IsPress(enButtonSelect)) {
-		NewGO<testscene>(0, "testscene");
-	}*/
+	//スペースキーでテストシーンへ
+	if (Pad(0).IsPress(enButtonSelect)) {
+		NewGO<testscene>(0, "testscene"); 
+	}
 }
 void Game::Render(CRenderContext& rc)
 {
