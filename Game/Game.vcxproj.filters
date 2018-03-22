@@ -51,6 +51,9 @@
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Nessie.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\shader\tonemap.fx">
