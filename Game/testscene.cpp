@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "testscene.h"
+#include"koneta1.h"
 
 
 testscene::testscene()
@@ -28,7 +29,11 @@ bool testscene::Start()
 }
 void testscene::Update()
 {
+	NewGO<koneta1>(0, "koneta1");
+	DeleteGO(this);
 }
+
 void testscene::Render(CRenderContext& rc)
 {
+
 }
