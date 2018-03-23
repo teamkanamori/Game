@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "testscene.h"
+#include "Nessie.h"
 
 
 Game::Game()
@@ -35,7 +36,8 @@ void Game::Update()
 {
 	//スペースキーでテストシーンへ
 	if (Pad(0).IsPress(enButtonSelect)) {
-		NewGO<testscene>(0, "testscene"); 
+		//NewGO<testscene>(0, "testscene");
+		NewGO<Nessie>(0, "Nessie");
 	}
 }
 void Game::Render(CRenderContext& rc)

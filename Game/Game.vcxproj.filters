@@ -35,6 +35,7 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="testscene.cpp" />
+    <ClCompile Include="Nessie.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -43,6 +44,7 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="testscene.h" />
+    <ClInclude Include="Nessie.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
