@@ -619,6 +619,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="main.cpp" />
@@ -631,10 +632,18 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="testscene.cpp" />
+    <ClCompile Include="title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Fade.h" />
     <ClInclude Include="koneta1.h" />
+    <ClInclude Include="Resource\shader\LightingFunction.h" />
+    <ClInclude Include="Resource\shader\modelCB.h" />
+    <ClInclude Include="Resource\shader\modelSRV.h" />
+    <ClInclude Include="Resource\shader\modelStruct.h" />
+    <ClInclude Include="Resource\shader\sampleBRDF.h" />
     <ClInclude Include="testscene.h" />
+    <ClInclude Include="title.h" />
     <CustomBuild Include="Assets\shader\LightingFunction.h" />
     <CustomBuild Include="Assets\shader\modelCB.h" />
     <CustomBuild Include="Assets\shader\modelSRV.h" />
@@ -732,6 +741,12 @@
     <CustomBuild Include="Assets\animData\wakeup.tka">
       <FileType>Document</FileType>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Resource\sprite\fade.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

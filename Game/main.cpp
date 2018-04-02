@@ -3,6 +3,8 @@
  */
 #include "stdafx.h"
 #include "Game.h"
+#include "Fade.h"
+#include "title.h"
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
@@ -35,7 +37,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
 	//エンジンを初期化。
 	if (Engine().Init(initParam) == true) {
-		NewGO<Game>(0, nullptr);
+		NewGO<Fade>(1, "Fade");
+		NewGO<title>(0, "title");
+		
 		//ゲームループを実行。
 		Engine().RunGameLoop();
 	}

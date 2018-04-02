@@ -36,6 +36,8 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="testscene.cpp" />
     <ClCompile Include="koneta1.cpp" />
+    <ClCompile Include="title.cpp" />
+    <ClCompile Include="Fade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -45,6 +47,13 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="koneta1.h" />
+    <ClInclude Include="title.h" />
+    <ClInclude Include="Resource\shader\LightingFunction.h" />
+    <ClInclude Include="Resource\shader\modelCB.h" />
+    <ClInclude Include="Resource\shader\modelSRV.h" />
+    <ClInclude Include="Resource\shader\modelStruct.h" />
+    <ClInclude Include="Resource\shader\sampleBRDF.h" />
+    <ClInclude Include="Fade.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -177,5 +186,13 @@
     <CustomBuild Include="Assets\animData\wakeup.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\title.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Resource\sprite\fade.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
 </Project>

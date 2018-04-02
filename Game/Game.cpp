@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "testscene.h"
+//#include "testscene.h"
 #include"koneta1.h"
 
 
@@ -30,10 +30,15 @@ bool Game::Start()
 }
 void Game::Update()
 {
+	
+	/*if (Pad(0).IsPress(enButtonA)) {
+		DeleteGO(this);
+     }*/
+
 	//スペースキーでテストシーンへ
-	if (Pad(0).IsPress(enButtonSelect)) {
-		NewGO<testscene>(0, "testscene");
-	}
+	//if (Pad(0).IsPress(enButtonSelect)) {
+	//	NewGO<testscene>(0, "testscene");
+	//}
 	//if (Pad(0).IsPress(enButtonA)) {
 	//	//Aボタンが押されたrあ。
 	//	m_skinModelRender->PlayAnimation(enAnimClip_slip);
