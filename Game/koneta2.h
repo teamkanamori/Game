@@ -8,7 +8,7 @@ public:
 	void Update();
 	void Render(CRenderContext& rc);
 	enum EnAnimClip {
-		//enAnimClip_idle,        //待機アニメーション。
+		enAnimClip_idle,        //待機アニメーション。
 		enAnimClip_slip,		//コケるモーション
 		enAnimClip_wakeup,		//起き上がりモーション。
 		enAnimClip_num,			//アニメーションデータの数。

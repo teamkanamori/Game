@@ -14,7 +14,7 @@ koneta2::~koneta2()
 
 bool koneta2::Start()
 {
-	//m_animClip[enAnimClip_slip].Load(L"animData/idle.tka");
+	m_animClip[enAnimClip_slip].Load(L"animData/idle.tka");
 	m_animClip[enAnimClip_slip].Load(L"animData/slip.tka");
 	m_animClip[enAnimClip_wakeup].Load(L"animData/wakeup.tka");
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
