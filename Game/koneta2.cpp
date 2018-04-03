@@ -1,27 +1,20 @@
 #include "stdafx.h"
-#include "koneta1.h"
-#include"banana.h"
+#include "koneta2.h"
+#include"ike.h"
 
 
-koneta1::koneta1()
+koneta2::koneta2()
 {
 }
 
 
-koneta1::~koneta1()
+koneta2::~koneta2()
 {
 }
 
-bool koneta1::Start()
+bool koneta2::Start()
 {
-	////カメラを設定。
-	MainCamera().SetTarget({ 0.0f, 10.0f, 0.0f });
-	MainCamera().SetNear(0.1f);
-	MainCamera().SetFar(100.0f);
-	MainCamera().SetPosition({ 30.0f, 10.0f, 0.0f });
-	MainCamera().Update();
-
-	m_animClip[enAnimClip_idle].Load(L"animData/idle.tka");
+	//m_animClip[enAnimClip_slip].Load(L"animData/idle.tka");
 	m_animClip[enAnimClip_slip].Load(L"animData/slip.tka");
 	m_animClip[enAnimClip_wakeup].Load(L"animData/wakeup.tka");
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
@@ -30,15 +23,14 @@ bool koneta1::Start()
 	return true;
 }
 
-void koneta1::Update()
+void koneta2::Update()
 {
-	m_position.z -= 0.1f;
-
+	m_position.x = -10.0f;
+	m_position.z += 0.1f;
 	//座標を設定。
 	m_skinModelRender->SetPosition(m_position);
 
-
-	banana*gl = FindGO<banana>("banana");
+	ike*gl = FindGO<ike>("ike");
 	CVector3 diff = CVector3::Zero;
 	/*diff.x = m_position.x - gl->m_position.x;
 	diff.y = m_position.y - gl->m_position.y;*/
@@ -48,14 +40,15 @@ void koneta1::Update()
 		if (flag == 1) {
 			return;
 		}
-			m_skinModelRender->PlayAnimation(enAnimClip_wakeup);
-			
+		m_skinModelRender->PlayAnimation(enAnimClip_wakeup);
+
+		m_position.y -= 5.0f;
 
 		flag = 1;
 	}
 }
 
-void koneta1::Render(CRenderContext& rc)
+void koneta2::Render(CRenderContext& rc)
 {
 
 }

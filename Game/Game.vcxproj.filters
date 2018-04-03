@@ -36,6 +36,10 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="testscene.cpp" />
     <ClCompile Include="koneta1.cpp" />
+    <ClCompile Include="banana.cpp" />
+    <ClCompile Include="koneta2.cpp" />
+    <ClCompile Include="ike.cpp" />
+    <ClCompile Include="Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -45,6 +49,10 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="koneta1.h" />
+    <ClInclude Include="banana.h" />
+    <ClInclude Include="koneta2.h" />
+    <ClInclude Include="ike.h" />
+    <ClInclude Include="Camera.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -56,6 +64,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\banana.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -175,6 +186,12 @@
       <Filter>Assets\animData</Filter>
     </CustomBuild>
     <CustomBuild Include="Assets\animData\wakeup.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\banana.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\idle.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
   </ItemGroup>
