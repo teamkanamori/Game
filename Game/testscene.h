@@ -1,12 +1,9 @@
 #pragma once
 
 #include "tkEngine/graphics/effect/tkEffect.h"
-<<<<<<< HEAD
 #include "Camera.h"
-
-=======
 #include "Fade.h"
->>>>>>> dae8e8d0d75ec67f4530fa746ae4d112d9ce492b
+
 class testscene : public IGameObject
 {
 public:

@@ -40,6 +40,8 @@
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -53,6 +55,8 @@
     <ClInclude Include="koneta2.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Fade.h" />
+    <ClInclude Include="title.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -194,5 +198,13 @@
     <CustomBuild Include="Assets\animData\idle.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\fade.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\title.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
 </Project>
