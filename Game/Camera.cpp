@@ -79,6 +79,8 @@ void Camera::Render(CRenderContext& rc)
 			rc.OMSetRenderTargets(numView, rtsBackup);
 
 			ge.EndGPUEvent();
+
+			flag = 0;
 		}
 	}
 
