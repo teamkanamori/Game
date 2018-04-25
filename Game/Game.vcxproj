@@ -622,11 +622,13 @@
     <ClCompile Include="banana.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="finish.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -642,9 +644,11 @@
     <ClInclude Include="banana.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Fade.h" />
+    <ClInclude Include="finish.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
+    <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="title.h" />
     <CustomBuild Include="Assets\shader\LightingFunction.h" />
@@ -662,6 +666,11 @@
       <FileType>Document</FileType>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
+    <MeshContentTask Include="Assets\modelData\news.FBX" />
+    <MeshContentTask Include="Assets\modelData\skydome.FBX" />
+    <MeshContentTask Include="Assets\modelData\stage1.FBX">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
@@ -761,6 +770,9 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\fade.png" />
     <ImageContentTask Include="Assets\sprite\title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\sky.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -51,6 +51,9 @@ void Camera::Update()
 		//シャッタが押されたフラグをtrueにする。
 	}
 	time += GameTime().GetFrameDeltaTime();
+	//シーンプレイヤーを使うとき、
+	//timeに　＝＝の文は使えない
+	// if(time > 1 &&  一度も再生されていないというflgが必要)
 }
 
 void Camera::Render(CRenderContext& rc)

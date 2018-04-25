@@ -32,8 +32,16 @@ public:
 	CShaderResourceView m_texture;
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
+	prefab::CSpriteRender* m_spriteRender;
+	CVector3 m_position = CVector3::Zero;	//座標。
+	CVector3 m_position2 = CVector3::Zero;	//座標。
 	CAnimationClip m_animClip[1];							//アニメーションクリップ。
 	CAnimation m_animation;
 	Camera m_camera;
 	CVector3 m_pos = CVector3::Zero;
+
+	float time = 0;
+	int flag = 0;
+
+
 };

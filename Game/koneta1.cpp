@@ -18,8 +18,10 @@ bool koneta1::Start()
 	MainCamera().SetTarget({ 0.0f, 10.0f, 0.0f });
 	MainCamera().SetNear(0.1f);
 	MainCamera().SetFar(100.0f);
-	MainCamera().SetPosition({ 30.0f, 10.0f, 0.0f });
+	MainCamera().SetPosition({ 30.0f, 10.0f, -50.0f });
 	MainCamera().Update();
+
+	m_position = { 0.0f,0.0f,-30.0f };
 
 	m_animClip[enAnimClip_idle].Load(L"animData/idle.tka");
 	m_animClip[enAnimClip_slip].Load(L"animData/slip.tka");
@@ -33,6 +35,7 @@ bool koneta1::Start()
 void koneta1::Update()
 {
 	m_position.z -= 0.1f;
+	
 
 	//À•W‚ðÝ’èB
 	m_skinModelRender->SetPosition(m_position);
@@ -53,6 +56,7 @@ void koneta1::Update()
 
 		flag = 1;
 	}
+	
 }
 
 void koneta1::Render(CRenderContext& rc)
