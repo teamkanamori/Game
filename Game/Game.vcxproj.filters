@@ -44,6 +44,7 @@
     <ClCompile Include="title.cpp" />
     <ClCompile Include="finish.cpp" />
     <ClCompile Include="sceneplayer.cpp" />
+    <ClCompile Include="picture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -61,6 +62,7 @@
     <ClInclude Include="title.h" />
     <ClInclude Include="finish.h" />
     <ClInclude Include="sceneplayer.h" />
+    <ClInclude Include="picture.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">

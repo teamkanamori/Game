@@ -5,7 +5,7 @@
 #include "tkEngine/graphics/tkSkinModelRender.h"
 
 
-namespace tkEngine{
+namespace tkEngine {
 	namespace prefab {
 
 		void CSkinModelRender::Init(
@@ -47,6 +47,14 @@ namespace tkEngine{
 
 		void  CSkinModelRender::Render(CRenderContext& rc)
 		{
+			if (m_overrideDiffuseTexture != nullptr) {
+				//ディフューズテクスチャを差し替え。
+				m_skinModel.FindMaterial([&](auto material) {
+					material->SetOverrideDiffuseTexture(m_overrideDiffuseTexture);
+				});
+			}
+			m_skinModel.Draw(rc);
+		
 			if (m_isSkinModelDrawOnRenderFunction == true) {
 				//モデルの描画はRender関数で行う。
 				m_skinModel.Draw(rc);
