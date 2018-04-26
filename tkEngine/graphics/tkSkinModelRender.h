@@ -3,8 +3,6 @@
  */
 
 #pragma once
-
-
 namespace tkEngine {
 	namespace prefab {
 		class CSkinModelRender : public IGameObject {
@@ -139,6 +137,10 @@ namespace tkEngine {
 			{
 				m_skinModel.FindMaterial(findMaterial);
 			}
+			void SetOverrideDiffuseTexture(ID3D11ShaderResourceView* tex)
+			{
+				m_overrideDiffuseTexture = tex;
+			}
 			/*!
 			* @brief	アニメーションの初期化。
 			*/
@@ -158,6 +160,7 @@ namespace tkEngine {
 			CSkinModelData				m_skinModelData;					//!<スキンモデルデータ。
 			const std::wstring			m_filePath;							//!<ファイルパス。
 			bool m_isSkinModelDrawOnRenderFunction = true;
+			ID3D11ShaderResourceView*	m_overrideDiffuseTexture = nullptr;
 		};
 	}
 }

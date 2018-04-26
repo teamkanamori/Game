@@ -1,12 +1,13 @@
 #include "stdafx.h"
 #include "Game.h"
-#include "testscene.h"
+#include "picture.h"
 #include"koneta1.h"
 #include "koneta2.h"
 #include "sceneplayer.h"
 #include"banana.h"
 #include "ike.h"
 #include"finish.h"
+
 
 Game::Game()
 {
@@ -61,6 +62,20 @@ bool Game::Start()
 	m_fade->StartFadeIn();
 	m_state = enState_FadeIn;
 
+		NewGO<ike>(0, "ike");
+	picture* pic1 = NewGO<picture>(0, "picture");
+	pic1->m_position.y = 20.0f;
+	pic1->m_position.z = -40.0f;
+	pic1->m_renderTargetNo = 0;
+	picture* pic2 = NewGO<picture>(0, "picture");
+	pic2->m_position.y = 13.0f;
+	pic2->m_position.z = -40.0f;
+	pic2->m_renderTargetNo = 1;
+	picture* pic3 = NewGO<picture>(0, "picture");
+	pic3->m_position.y = 6.0f;
+	pic3->m_position.z = -40.0f;
+	pic3->m_renderTargetNo = 2;
+
 	EventData eventDataTbl[] = {
 		{5.0f, enEventNo_Koneta1 },
 		{30.0f, enEventNo_Koneta2 },
@@ -96,27 +111,8 @@ void Game::Update()
 
 		break;
 	}
-	
 	}
-	
 
-	/*if (Pad(0).IsPress(enButtonA)) {
-		DeleteGO(this);
-	 }*/
-
-	 //スペースキーでテストシーンへ
-
-	 //if (Pad(0).IsPress(enButtonSelect)) {
-	 //	NewGO<testscene>(0, "testscene");
-	 //}
-	 //if (Pad(0).IsPress(enButtonA)) {
-	 //	//Aボタンが押されたrあ。
-	 //	m_skinModelRender->PlayAnimation(enAnimClip_slip);
-	 //}
-	 //if (Pad(0).IsPress(enButtonB)) {
-	 //	//Bボタンが押されたら。
-	 //	m_skinModelRender->PlayAnimation(enAnimClip_wakeup);
-	 //}
 }
 void Game::Render(CRenderContext& rc)
 {

@@ -628,6 +628,7 @@
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="picture.cpp" />
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -648,6 +649,7 @@
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
+    <ClInclude Include="picture.h" />
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="title.h" />

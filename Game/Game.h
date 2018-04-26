@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Camera.h"
 #include "tkEngine/graphics/effect/tkEffect.h"
 #include"sceneplayer.h"
 #include "Fade.h"

@@ -24,6 +24,7 @@ namespace tkEngine{
 		CShader m_vsRenderToDepthShaderInstancing;	//!<Z値書き込み用の頂点シェーダー。インスタンシング用。
 		CShader m_psRenderToDepthShader;	//!<Z値書き込み用のピクセルシェーダー。
 		CShader m_psRenderToGBufferShader;	//!<G-Buffer書き込み用のピクセルシェーダー。
+		ID3D11ShaderResourceView* m_overrideDiffuseTex = nullptr;
 		ID3D11ShaderResourceView* m_diffuseTex = nullptr;
 		ID3D11ShaderResourceView* m_normalMap = nullptr;
 		ID3D11ShaderResourceView* m_specularMap = nullptr;
@@ -72,6 +73,11 @@ namespace tkEngine{
 		{
 			*pShaderByteCode = m_vsShader.GetByteCode();
 			*pByteCodeLength = m_vsShader.GetByteCodeSize();
+		}
+		//差し替えのテクスチャを設定。
+		void SetOverrideDiffuseTexture(ID3D11ShaderResourceView* tex)
+		{
+			m_overrideDiffuseTex = tex;
 		}
 		void SetDiffuseTexture(ID3D11ShaderResourceView* tex)
 		{
