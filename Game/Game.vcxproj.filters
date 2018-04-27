@@ -35,6 +35,13 @@
     <ClCompile Include="stdafx.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="testscene.cpp" />
+    <ClCompile Include="koneta1.cpp" />
+    <ClCompile Include="banana.cpp" />
+    <ClCompile Include="koneta2.cpp" />
+    <ClCompile Include="ike.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="title.cpp" />
     <ClCompile Include="Nessie.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -44,6 +51,13 @@
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="testscene.h" />
+    <ClInclude Include="koneta1.h" />
+    <ClInclude Include="banana.h" />
+    <ClInclude Include="koneta2.h" />
+    <ClInclude Include="ike.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Fade.h" />
+    <ClInclude Include="title.h" />
     <ClInclude Include="Nessie.h" />
   </ItemGroup>
   <ItemGroup>
@@ -53,6 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\kokeruhito.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\banana.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Nessie.FBX">
@@ -168,5 +188,33 @@
     <CustomBuild Include="Assets\effect\Texture\wind02.png">
       <Filter>Assets\effect\Texture</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\modelData\kokeruhito.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\slip.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\wakeup.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\banana.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\idle.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\fade.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\title.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\modelData\gray.png">
+      <Filter>Assets\modelData</Filter>
+    </Image>
   </ItemGroup>
 </Project>

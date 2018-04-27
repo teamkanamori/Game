@@ -3,12 +3,13 @@
  */
 #include "stdafx.h"
 #include "Game.h"
+#include "Fade.h"
+#include "title.h"
 
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
-
 	srand((unsigned)time(NULL));
 	//tkEngine2の初期化パラメータを設定する。
 	SInitParam initParam;
@@ -35,7 +36,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
 	//エンジンを初期化。
 	if (Engine().Init(initParam) == true) {
-		NewGO<Game>(0, nullptr);
+		NewGO<Fade>(1, "Fade");
+		NewGO<title>(0, "title");
+		
 		//ゲームループを実行。
 		Engine().RunGameLoop();
 	}
