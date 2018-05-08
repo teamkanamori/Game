@@ -95,8 +95,13 @@ namespace tkEngine{
 				break;
 			}
 		}
-		
-		deviceContext->PSSetShaderResources(enSkinModelSRVReg_AlbedoTexture, 1, &m_diffuseTex);
+		if (m_overrideDiffuseTex != nullptr) {
+			//差し替え用のテクスチャが指定されている。
+			deviceContext->PSSetShaderResources(enSkinModelSRVReg_AlbedoTexture, 1, &m_overrideDiffuseTex);
+		}
+		else {
+			deviceContext->PSSetShaderResources(enSkinModelSRVReg_AlbedoTexture, 1, &m_diffuseTex);
+		}
 		m_materialParam.hasNormalMap = 0;
 		if (m_normalMap != nullptr) {
 			deviceContext->PSSetShaderResources(enSkinModelSRVReg_NormalMap, 1, &m_normalMap);

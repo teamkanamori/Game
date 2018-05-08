@@ -2,6 +2,7 @@
 #include "title.h"
 #include "testscene.h"
 #include "Fade.h"
+#include"Game.h"
 
 
 title::title()
@@ -35,7 +36,8 @@ bool title::Start()
 {
 	 if (m_isWaitFadeout) {
 		 if (!m_fade->IsFade()) {
-			 NewGO<testscene>(0, "testscene");
+			 NewGO<Game>(0, "Game");
+			/* NewGO<testscene>(0, "testscene");*/
 			 DeleteGO(this);
 		 }
 	 }
