@@ -9,6 +9,8 @@
 #include"finish.h"
 
 
+
+
 Game::Game()
 {
 }
@@ -39,6 +41,8 @@ bool Game::Start()
 	m_skinModelRender->Init(L"modelData/skydome.cmo");
 	m_skinModelRender->SetScale({0.1f, 0.1f, 0.1f });
 
+
+
 	
 		//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 		//m_skinModelRender->Init(L"modelData/news.cmo");
@@ -62,24 +66,24 @@ bool Game::Start()
 	m_fade->StartFadeIn();
 	m_state = enState_FadeIn;
 
-		NewGO<ike>(0, "ike");
+	NewGO<ike>(0, "ike");
 	picture* pic1 = NewGO<picture>(0, "picture");
 	pic1->m_position.y = 20.0f;
 	pic1->m_position.z = -40.0f;
 	pic1->m_renderTargetNo = 0;
 	picture* pic2 = NewGO<picture>(0, "picture");
-	pic2->m_position.y = 13.0f;
-	pic2->m_position.z = -40.0f;
-	pic2->m_renderTargetNo = 1;
+	pic2->m_position.y = 13.0f;        
+	pic2->m_position.z = -40.0f;                 
+	pic2->m_renderTargetNo = 1;                   
 	picture* pic3 = NewGO<picture>(0, "picture");
 	pic3->m_position.y = 6.0f;
 	pic3->m_position.z = -40.0f;
 	pic3->m_renderTargetNo = 2;
 
 	EventData eventDataTbl[] = {
-		{5.0f, enEventNo_Koneta1 },
-		{30.0f, enEventNo_Koneta2 },
-	    {60.0f, enEventNo_news },
+		{5.0f, enBigScoop, enEventNo_Koneta1 },
+		{30.0f, enMiddleScoop, enEventNo_Koneta2 },
+	    {60.0f, enSmallScoop, enEventNo_news },
 		/*{3.0f, enEventNo_Koneta1 },*/
 	};
 	m_sceneplayer.Init(eventDataTbl, sizeof(eventDataTbl) / sizeof(eventDataTbl[0]));
@@ -87,7 +91,9 @@ bool Game::Start()
 }
 void Game::Update()
 {
-	m_sceneplayer.Update();
+	
+
+	 m_sceneplayer.Update();
 	m_camera.Update();
 
 	m_position = { 0.0f,290.0f,200.0f };
@@ -112,6 +118,8 @@ void Game::Update()
 		break;
 	}
 	}
+
+	
 
 }
 void Game::Render(CRenderContext& rc)

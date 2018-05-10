@@ -39,6 +39,7 @@ bool Camera::Start()
 
 void Camera::Update()
 {
+
 	if (Pad(0).IsTrigger(enButtonRB1)) {
 		if (shattercount < 3) {
 			timestanp[shattercount] = time;
@@ -58,6 +59,8 @@ void Camera::Update()
 
 void Camera::Render(CRenderContext& rc)
 {
+
+
 	if (flag == 1) {
 		//‚±‚ê‚ªŽB‰e‚µ‚½ƒeƒNƒXƒ`ƒƒB‚±‚¢‚Â‚ðCSprite‚ÌInitŠÖ”‚É“n‚µ‚Ä‚â‚ê‚Î‚©‚¯‚é‚Í‚¸
 		//renderTargets[0].GetRenderTargetSRV();

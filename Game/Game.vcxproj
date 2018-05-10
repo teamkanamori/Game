@@ -669,6 +669,7 @@
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
     <MeshContentTask Include="Assets\modelData\news.FBX" />
+    <MeshContentTask Include="Assets\modelData\picture.FBX" />
     <MeshContentTask Include="Assets\modelData\skydome.FBX" />
     <MeshContentTask Include="Assets\modelData\stage1.FBX">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
@@ -775,6 +776,9 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\sky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\clear.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

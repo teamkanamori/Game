@@ -39,9 +39,11 @@ public:
 	EnState m_state = enState_Idle;	//!<ó‘ÔB
 	float m_currentAlpha = 1.0f;		//!<Œ»İ‚Ìƒ¿’lB
 	float m_waitTimer = 0.0f;
-	Camera m_camera;
 	CVector3 m_position = CVector3::Zero;
-
+	Camera m_camera;
 	float time = 0;
+    
 };
+
+
 
