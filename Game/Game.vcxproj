@@ -781,6 +781,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg" />
+    <ImageContentTask Include="Assets\modelData\Finder.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

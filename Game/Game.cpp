@@ -18,6 +18,8 @@ Game::Game()
 
 Game::~Game()
 {
+
+	DeleteGO(m_spriteRender);
 }
 bool Game::Start()
 {	
@@ -53,6 +55,7 @@ bool Game::Start()
 
 	//スプライトを初期化。
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
+	m_spriteRender->Init(L"sprite/Finder.dds", 1280, 720);
 	/*m_spriteRender->Init(L"sprite/sky.dds", 1280, 720);*/
 
 
@@ -60,6 +63,7 @@ bool Game::Start()
 	/*NewGO<finish>(0, "finish");*/
 	NewGO<banana>(0, "banana");
 	NewGO<ike>(0, "ike");
+	NewGO<Nessie>(0, "Nessie");
 	m_fade = FindGO<Fade>("Fade");
 	m_fade->StartFadeIn();
 	m_state = enState_FadeIn;
@@ -94,7 +98,8 @@ void Game::Update()
 	m_sceneplayer.Update();
 	m_camera.Update();
 
-	m_position = { 0.0f,290.0f,200.0f };
+	//m_position = { 0.0f,290.0f,200.0f };
+	m_position = { 0.0f,0.0f,0.0f };
 
 	m_spriteRender->SetPosition(m_position);
 
@@ -117,7 +122,15 @@ void Game::Update()
 	}
 
 	}
+	/*
+	m_texture.CreateFromDDSTextureFromFile(L"sprite/Finder.dds");
+	m_sprite.Init(m_texture, 1280, 720);
 
+
+	//ワールド行列の更新。
+	m_sprite.Update({ 0.0f,0.0f,0.0f }, CQuaternion::Identity, CVector3::One);
+	
+	m_spriteRender->SetPosition(m_position);*/
 }
 void Game::Render(CRenderContext& rc)
 {

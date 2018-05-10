@@ -229,6 +229,9 @@
     <ImageContentTask Include="Assets\sprite\sky.jpg">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\Finder.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg">
