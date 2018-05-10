@@ -33,7 +33,7 @@ void sceneplayer::Init(EventData* eventDataTbl, int numEventData)
 void sceneplayer::Update() 
 {	
 	
-	/*Camera* m_camera = FindGO<Camera>("Camera");*/
+	
 
 	m_timer += GameTime().GetFrameDeltaTime();
 

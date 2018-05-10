@@ -5,6 +5,8 @@
 #include"koneta2.h"
 #include"ike.h"
 #include "Fade.h"
+
+#include"Nessie.h"
 #include"picture.h"
 #include "finish.h"
 //テストシーンでフェイドインさせる。
@@ -52,6 +54,9 @@ bool testscene::Start()
     NewGO<koneta2>(0, "koneta2");
 		
 	NewGO<ike>(0, "ike");
+
+	NewGO<Nessie>(0, "Nessie");
+
 	picture* pic1 = NewGO<picture>(0, "picture");
 	pic1->m_position.y = 23.0f;
 	pic1->m_position.z = 24.0f;
@@ -64,6 +69,7 @@ bool testscene::Start()
 	pic3->m_position.y = 9.0f;
 	pic3->m_position.z = 24.0f;
 	pic3->m_renderTargetNo = 2;
+
 
 	m_texture.CreateFromDDSTextureFromFile(L"sprite/fade.dds");
 	m_sprite.Init(

@@ -628,6 +628,7 @@
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -649,6 +650,7 @@
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
+    <ClInclude Include="Nessie.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="testscene.h" />
@@ -668,6 +670,7 @@
       <FileType>Document</FileType>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
+    <MeshContentTask Include="Assets\modelData\Nessie.FBX" />
     <MeshContentTask Include="Assets\modelData\news.FBX" />
     <MeshContentTask Include="Assets\modelData\picture.FBX" />
     <MeshContentTask Include="Assets\modelData\skydome.FBX" />
@@ -779,6 +782,9 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\modelData\Finder.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

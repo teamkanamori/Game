@@ -41,6 +41,10 @@ public:
 	float m_waitTimer = 0.0f;
 	CVector3 m_position = CVector3::Zero;
 	Camera m_camera;
+
+	CSprite m_sprite;				//スプライト。
+	CShaderResourceView m_texture;	//テクスチャ。
+
 	float time = 0;
     
 };
