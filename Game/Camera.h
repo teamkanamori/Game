@@ -1,4 +1,7 @@
 #pragma once
+
+#include "tkEngine/graphics/effect/tkEffect.h"
+
 class Camera 
 {
 public:
@@ -14,5 +17,7 @@ public:
 	CRenderTarget renderTargets[3];
 	CSprite m_sprite;	//シーンをペタッと張り付けるためのスプライト
 	int flag = 0;
+	prefab::CSoundSource* m_bgmSoundSource = nullptr;	//BGM用のサウンドソース。
+	CVector3 m_pos = CVector3::Zero;
 };
 

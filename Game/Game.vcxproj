@@ -670,6 +670,7 @@
       <FileType>Document</FileType>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
+    <MeshContentTask Include="Assets\modelData\Nessie.FBX" />
     <MeshContentTask Include="Assets\modelData\news.FBX" />
     <MeshContentTask Include="Assets\modelData\picture.FBX" />
     <MeshContentTask Include="Assets\modelData\skydome.FBX" />
@@ -781,7 +782,13 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg" />
+    <Image Include="Assets\modelData\gray.png" />
     <ImageContentTask Include="Assets\modelData\Finder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\Shutter.mp3">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

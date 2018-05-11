@@ -39,11 +39,27 @@ bool Camera::Start()
 
 void Camera::Update()
 {
+	prefab::CSoundSource* ss;
+
 	if (Pad(0).IsTrigger(enButtonRB1)) {
 		if (shattercount < 3) {
 			timestanp[shattercount] = time;
 			shattercount++;
 			flag = 1;
+
+			ss = NewGO<prefab::CSoundSource>(0);
+			ss->Init("sound/Shutter.mp3");
+			ss->Play(false);
+
+			//エフェクトを作成。
+			prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
+			//エフェクトを再生。
+			effect->Play(L"effect/test.efk");
+			CVector3 emitPos = m_pos;
+			emitPos.x += 10.0f;
+			emitPos.y += 10.0f;
+			emitPos.z -= 30.0f;
+			effect->SetPosition(emitPos);
 		}
 		else {
 			MessageBox(NULL, "もうシャッターは押せません！", "警告", MB_OK);

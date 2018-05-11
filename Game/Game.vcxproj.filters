@@ -29,6 +29,9 @@
     <Filter Include="Assets\modelData\shader">
       <UniqueIdentifier>{a961ab0f-689c-4adf-940a-ffea33655653}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\sound">
+      <UniqueIdentifier>{0e4bc2e5-2ed2-4e1e-b989-fe044e9058e2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
@@ -91,6 +94,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\picture.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Nessie.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -218,6 +224,9 @@
     <CustomBuild Include="Assets\animData\idle.tka">
       <Filter>Assets\animData</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\sound\Shutter.mp3">
+      <Filter>Assets\sound</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\fade.png">
@@ -235,6 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\gray.png">
       <Filter>Assets\modelData</Filter>
     </Image>
   </ItemGroup>

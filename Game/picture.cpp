@@ -14,7 +14,6 @@ picture::~picture()
 
 bool picture::Start()
 {
-	
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 		m_skinModelRender->Init(L"modelData/picture.cmo");
 		m_skinModelRender->SetScale({ 0.15f, 0.15f, 0.15f });
