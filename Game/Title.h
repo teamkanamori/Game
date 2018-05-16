@@ -1,21 +1,26 @@
 #pragma once
-class Title :public IGameObject
+class Fade;
+
+class title : public IGameObject
 {
 public:
-	Title();
-	~Title();
-	bool Start();
-	void Update();
+	/////////////////////////////////////////////
+	//メンバ関数。
+	/////////////////////////////////////////////
+	title();
+	~title();
+	bool Start()override;
+	void Update()override;
 
-	enum EnAnimClip {
-		enAnimClip_jj,   //タイトルのアニメーション
-		enAnimClip_num,
-	};
-	CSkinModel m_skinModel;			//スキンモデル
-	CSkinModelData m_skinModelData;	//スキンモデルデータ
-	CAnimationClip m_animClip[enAnimClip_num];	//アニメーションクリップ
-	prefab::CSkinModelRender* m_skinModelRender = nullptr;
-	CVector3 m_position = CVector3::Zero;	//JJモデルの座標
-	CQuaternion m_rotation = CQuaternion::Identity;	//回転
+	/////////////////////////////////////////////
+	//メンバ変数とか。
+	/////////////////////////////////////////////
+	
+	prefab::CSpriteRender* m_spriteRender;
+	CVector3	m_position;		//座標。
+	CQuaternion m_rotation;	//回転。
+private:
+	bool m_isWaitFadeout = false;
+	Fade* m_fade = nullptr;
+	CFont m_font;
 };
-

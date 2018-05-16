@@ -1,36 +1,54 @@
 #include "stdafx.h"
-#include "Title.h"
+#include "title.h"
+#include "testscene.h"
+#include "Fade.h"
+#include"Game.h"
 
 
-Title::Title()
+title::title()
 {
 }
 
 
-Title::~Title()
+title::~title()
 {
+	DeleteGO(m_spriteRender);
 }
 
-bool Title::Start()
-{
-	//カメラを設定。
-	MainCamera().SetTarget({ 180.0f,50.0f,-20.0f });		//カメラの向き
-	MainCamera().SetPosition({ 175.0f,70.0f,-400.0f });	//カメラの位置
-	MainCamera().Update();
 
-	//アニメーションクリップのロード。
-	m_animClip[enAnimClip_jj].Load(L"animdata/title.tka");
-	//スキンモデルレンダラーを作成。
-	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/Title.cmo", m_animClip, enAnimClip_num);
-	m_skinModelRender->SetScale({ 5.0f,5.0f,5.0f });
-	//なんかようわからんけどループ
-	m_animClip[enAnimClip_jj].SetLoopFlag(true);
+bool title::Start()
+{
+	//スプライトを初期化。
+	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
+	m_spriteRender->Init(L"sprite/title.dds", 1280, 720);
+
+	m_fade = FindGO<Fade>("Fade");
+		
+	
+	m_font.SetShadowParam(true, 1.0f, { 26.0f / 255.0f, 49 / 255.0f, 103 / 255.0f, 1.0f });
+	m_fade->StartFadeIn();
+	
 
 	return true;
 }
 
-void Title::Update()
+ void title::Update()
 {
+	 if (m_isWaitFadeout) {
+		 if (!m_fade->IsFade()) {
+			 NewGO<Game>(0, "Game");
+			/* NewGO<testscene>(0, "testscene");*/
+			 DeleteGO(this);
+		 }
+	 }
+	 else {
+		 if (Pad(0).IsPress(enButtonA)) {
+			 m_isWaitFadeout = true;
+			 m_fade->StartFadeOut();
+
+		 }
+	 }
+	 
+	 
 
 }
