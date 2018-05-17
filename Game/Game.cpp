@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Game.h"
 #include "testscene.h"
+#include "Title.h"
 #include "Nessie.h"
 #include "picture.h"
 #include"koneta1.h"
@@ -98,6 +99,12 @@ bool Game::Start()
 }
 void Game::Update()
 {
+	NewGO<Title>(0, "Title");
+	DeleteGO(this);
+	//スペースキーでテストシーンへ
+	if (Pad(0).IsPress(enButtonSelect)) {
+		NewGO<testscene>(0, "testscene"); 
+
 
 	m_camera.Update();
 
