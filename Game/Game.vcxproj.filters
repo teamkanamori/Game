@@ -49,6 +49,7 @@
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="Nessie.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -68,6 +69,7 @@
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="Nessie.h" />
+    <ClInclude Include="GameCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -239,6 +241,9 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\modelData\Finder.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\clear.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
   </ItemGroup>
