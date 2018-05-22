@@ -624,13 +624,16 @@
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="finish.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="modoru.cpp" />
     <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="sceneplayer.cpp" />
+    <ClCompile Include="selectstage.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -647,12 +650,15 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="finish.h" />
+    <ClInclude Include="GameCamera.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
+    <ClInclude Include="modoru.h" />
     <ClInclude Include="Nessie.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="sceneplayer.h" />
+    <ClInclude Include="selectstage.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="title.h" />
     <CustomBuild Include="Assets\shader\LightingFunction.h" />
@@ -677,6 +683,7 @@
     <MeshContentTask Include="Assets\modelData\stage1.FBX">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\StageSelect.FBX" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
   </ItemGroup>
   <ItemGroup>
@@ -783,6 +790,10 @@
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg" />
     <Image Include="Assets\modelData\gray.png" />
+    <ImageContentTask Include="Assets\sprite\key_gold.png" />
+    <ImageContentTask Include="Assets\sprite\key.png" />
+    <ImageContentTask Include="Assets\sprite\select.png" />
+    <ImageContentTask Include="Assets\sprite\clear.png" />
     <ImageContentTask Include="Assets\modelData\Finder.png" />
   </ItemGroup>
   <ItemGroup>

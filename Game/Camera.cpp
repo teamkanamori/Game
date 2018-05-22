@@ -56,7 +56,7 @@ void Camera::Update()
 			//エフェクトを再生。
 			effect->Play(L"effect/test.efk");
 			CVector3 emitPos = m_pos;
-			emitPos.x += 10.0f;
+			emitPos.x += 23.0f;
 			emitPos.y += 10.0f;
 			emitPos.z -= 30.0f;
 			effect->SetPosition(emitPos);
@@ -74,6 +74,8 @@ void Camera::Update()
 
 void Camera::Render(CRenderContext& rc)
 {
+
+
 	if (flag == 1) {
 		//これが撮影したテクスチャ。こいつをCSpriteのInit関数に渡してやればかけるはず
 		//renderTargets[0].GetRenderTargetSRV();

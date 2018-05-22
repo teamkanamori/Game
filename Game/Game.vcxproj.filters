@@ -49,6 +49,9 @@
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="Nessie.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
+    <ClCompile Include="selectstage.cpp" />
+    <ClCompile Include="modoru.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -68,6 +71,9 @@
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="Nessie.h" />
+    <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="selectstage.h" />
+    <ClInclude Include="modoru.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -97,6 +103,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Nessie.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\StageSelect.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -239,6 +248,18 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\modelData\Finder.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\clear.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\select.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\key.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\key_gold.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
   </ItemGroup>

@@ -1,6 +1,7 @@
 #pragma once
 class Fade;
 
+
 class title : public IGameObject
 {
 public:

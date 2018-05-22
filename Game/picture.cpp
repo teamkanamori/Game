@@ -25,8 +25,10 @@ void picture::Update()
 {
 	//テストシーンのインスタンスを検索する。このコードはGameでは使えないので修正する必要がある。
 	Game* scene = FindGO<Game>("Game");
-	/*Game* scene = FindGO<Game>("Game");*/
+	
+
 	//ディフューズテクスチャを差し替える。
+	if(scene!=NULL)
 	m_skinModelRender->SetOverrideDiffuseTexture(scene->m_camera.renderTargets[m_renderTargetNo].GetRenderTargetSRV().GetBody());
 }
 
