@@ -51,7 +51,6 @@
     <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="selectstage.cpp" />
-    <ClCompile Include="modoru.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -73,7 +72,6 @@
     <ClInclude Include="Nessie.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="selectstage.h" />
-    <ClInclude Include="modoru.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -103,9 +101,6 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Nessie.FBX">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\StageSelect.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -221,17 +216,8 @@
     <CustomBuild Include="Assets\modelData\kokeruhito.tks">
       <Filter>Assets\modelData</Filter>
     </CustomBuild>
-    <CustomBuild Include="Assets\animData\slip.tka">
-      <Filter>Assets\animData</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Assets\animData\wakeup.tka">
-      <Filter>Assets\animData</Filter>
-    </CustomBuild>
     <CustomBuild Include="Assets\modelData\banana.tks">
       <Filter>Assets\modelData</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Assets\animData\idle.tka">
-      <Filter>Assets\animData</Filter>
     </CustomBuild>
     <CustomBuild Include="Assets\sound\Shutter.mp3">
       <Filter>Assets\sound</Filter>
@@ -253,15 +239,6 @@
     <ImageContentTask Include="Assets\sprite\clear.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\select.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\key.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\key_gold.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg">
@@ -270,5 +247,16 @@
     <Image Include="Assets\modelData\gray.png">
       <Filter>Assets\modelData</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\animData\idle.tka">
+      <Filter>Assets\animData</Filter>
+    </None>
+    <None Include="Assets\animData\slip.tka">
+      <Filter>Assets\animData</Filter>
+    </None>
+    <None Include="Assets\animData\wakeup.tka">
+      <Filter>Assets\animData</Filter>
+    </None>
   </ItemGroup>
 </Project>

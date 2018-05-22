@@ -18,6 +18,7 @@ sceneplayer::sceneplayer()
 
 sceneplayer::~sceneplayer()
 {
+
 }
 
 void sceneplayer::Init(EventData* eventDataTbl, int numEventData)
@@ -58,6 +59,7 @@ void sceneplayer::Update()
 					//m_skinModelRender->SetModelDrawOnRenderFunction(false);
 					//テストシーンのインスタンスを検索する。このコードはGameでは使えないので修正する必要がある。
 					Game* scene = FindGO<Game>("Game");
+
 					//ディフューズテクスチャを差し替える。
 					m_skinModelRender->FindMaterial([&](CModelEffect* material) {
 						if (material->EqualMaterialName(L"01 - Default") == true) {
@@ -140,15 +142,15 @@ void sceneplayer::Update()
 
 				}
 
+
 				if (m_eventDatas[i].eventNo == enEventNo_change) {
 					modoruFlag = 1;
-					Game* scene = FindGO<Game>("Game");
-					DeleteGO(scene);
+					/*Game* scene = FindGO<Game>("Game");
+					DeleteGO(scene);*/
 					//NewGO<modoru>(0, "modoru");
 					NewGO<selectstage>(0, "selectstage");
 					
 				}
-
 
 				//イベントの起動フラグを1にする。
 				m_invokeEventFlags[i] = 1;

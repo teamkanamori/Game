@@ -13,11 +13,18 @@ Nessie::~Nessie()
 
 bool Nessie::Start()
 {
+
 	//カメラを設定。
 	//MainCamera().SetTarget({ 0.0f, 10.0f, 0.0f });
 	//MainCamera().SetNear(0.1f);
 	//MainCamera().SetFar(100.0f);
 	//MainCamera().SetPosition({ 30.0f, 40.0f, 20.0f });
+
+	////カメラを設定。
+	//MainCamera().SetTarget({ 0.0f, 10.0f, 50.0f });
+	//MainCamera().SetNear(0.1f);
+	//MainCamera().SetFar(100.0f);
+	//MainCamera().SetPosition({ 0.0f, 10.0f, -50.0f });
 	//MainCamera().Update();
 
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
@@ -49,6 +56,6 @@ void Nessie::Update()
 	//	m_pos.y += 1.0f;
 	//}
 }
-void Nessie::Render(CRenderContext& rc)
-{
-}
+//void Nessie::Render(CRenderContext& rc)
+//{
+//}

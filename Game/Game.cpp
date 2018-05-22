@@ -10,7 +10,6 @@
 #include "ike.h"
 #include"finish.h"
 #include"GameCamera.h"
-#include"selectstage.h"
 
 
 
@@ -22,12 +21,10 @@ Game::Game()
 
 Game::~Game()
 {
-  DeleteGO(m_spriteRender);
-  DeleteGO(m_skinModelRender);
-  
+	//DeleteGO(m_spriteRender);
 }
 bool Game::Start()
-{	
+{
 	m_camera.Start();
 
 	//カメラを設定。
@@ -43,22 +40,22 @@ bool Game::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/stage1.cmo");
 	m_skinModelRender->SetScale({ 0.15f, 0.15f, 0.15f });
-   
+
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/skydome.cmo");
-	m_skinModelRender->SetScale({0.1f, 0.1f, 0.1f });
+	m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
 
 
 
-	
-		//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-		//m_skinModelRender->Init(L"modelData/news.cmo");
-		//m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
-		////newsはPostRenderで描画する。
-		//m_skinModelRender->SetModelDrawOnRenderFunction(false);
-		
-	
-	
+
+	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
+	//m_skinModelRender->Init(L"modelData/news.cmo");
+	//m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
+	////newsはPostRenderで描画する。
+	//m_skinModelRender->SetModelDrawOnRenderFunction(false);
+
+
+
 
 	//スプライトを初期化。
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
@@ -78,20 +75,20 @@ bool Game::Start()
 	pic1->m_position.z = -40.0f;
 	pic1->m_renderTargetNo = 0;
 	picture* pic2 = NewGO<picture>(0, "picture");
-	pic2->m_position.y = 13.0f;        
-	pic2->m_position.z = -40.0f;                 
-	pic2->m_renderTargetNo = 1;                   
+	pic2->m_position.y = 13.0f;
+	pic2->m_position.z = -40.0f;
+	pic2->m_renderTargetNo = 1;
 	picture* pic3 = NewGO<picture>(0, "picture");
 	pic3->m_position.y = 6.0f;
 	pic3->m_position.z = -40.0f;
 	pic3->m_renderTargetNo = 2;
 
 	EventData eventDataTbl[] = {
-		{5.0f, enBigScoop, enEventNo_Koneta1 },
-		{30.0f, enMiddleScoop, enEventNo_Koneta2 },
-	    {45.0f, enSmallScoop,enEventNo_Nessie },
-	    {60.0f, enSmallScoop, enEventNo_news },
-	    {65.0f, enSmallScoop, enEventNo_change },
+		{ 5.0f, enBigScoop, enEventNo_Koneta1 },
+	{ 30.0f, enMiddleScoop, enEventNo_Koneta2 },
+	{ 45.0f, enSmallScoop,enEventNo_Nessie },
+	{ 60.0f, enSmallScoop, enEventNo_news },
+	{ 65.0f, enSmallScoop, enEventNo_change },
 	};
 	m_sceneplayer.Init(eventDataTbl, sizeof(eventDataTbl) / sizeof(eventDataTbl[0]));
 	return true;
@@ -130,6 +127,6 @@ void Game::Update()
 void Game::Render(CRenderContext& rc)
 {
 	m_camera.Render(rc);
-	
+
 }
 

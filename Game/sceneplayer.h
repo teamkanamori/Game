@@ -27,9 +27,9 @@ public:
 	~sceneplayer();
 	void Update();
 	void Init(EventData* eventDataTbl, int numEventData);
+
 	int modoruFlag = 0;
 	
-
 private:
 	std::vector<EventData> m_eventDatas;	//!<イベントデータ。
 	std::vector<int> m_invokeEventFlags;	//!<イベント起動フラグ。
