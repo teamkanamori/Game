@@ -49,6 +49,8 @@ public:
 	CShaderResourceView m_texture;	//テクスチャ。
 
 	float time = 0;
+
+	sceneplayer sc;
     
 };
 

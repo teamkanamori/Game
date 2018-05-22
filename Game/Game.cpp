@@ -10,6 +10,7 @@
 #include "ike.h"
 #include"finish.h"
 #include"GameCamera.h"
+#include"selectstage.h"
 
 
 
@@ -21,7 +22,9 @@ Game::Game()
 
 Game::~Game()
 {
-	//DeleteGO(m_spriteRender);
+	DeleteGO(m_spriteRender);
+	DeleteGO(m_skinModelRender);
+
 }
 bool Game::Start()
 {
@@ -84,7 +87,7 @@ bool Game::Start()
 	pic3->m_renderTargetNo = 2;
 
 	EventData eventDataTbl[] = {
-		{ 5.0f, enBigScoop, enEventNo_Koneta1 },
+	{ 5.0f, enBigScoop, enEventNo_Koneta1 },
 	{ 30.0f, enMiddleScoop, enEventNo_Koneta2 },
 	{ 45.0f, enSmallScoop,enEventNo_Nessie },
 	{ 60.0f, enSmallScoop, enEventNo_news },
@@ -121,7 +124,10 @@ void Game::Update()
 	}
 
 	}
-
+	time += GameTime().GetFrameDeltaTime();
+	if (time > 10) {
+		DeleteGO(this);
+	}
 }
 
 void Game::Render(CRenderContext& rc)

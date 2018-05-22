@@ -5,9 +5,6 @@
 #include"Nessie.h"
 #include "Game.h"
 #include "selectstage.h"
-#include"modoru.h"
-
-
 
 
 sceneplayer::sceneplayer()
@@ -18,7 +15,8 @@ sceneplayer::sceneplayer()
 
 sceneplayer::~sceneplayer()
 {
-
+	//DeleteGO(m_spriteRender);
+	//DeleteGO(m_skinModelRender);
 }
 
 void sceneplayer::Init(EventData* eventDataTbl, int numEventData)
@@ -144,16 +142,12 @@ void sceneplayer::Update()
 
 
 				if (m_eventDatas[i].eventNo == enEventNo_change) {
-					modoruFlag = 1;
-					/*Game* scene = FindGO<Game>("Game");
-					DeleteGO(scene);*/
-					//NewGO<modoru>(0, "modoru");
 					NewGO<selectstage>(0, "selectstage");
-					
 				}
 
 				//イベントの起動フラグを1にする。
 				m_invokeEventFlags[i] = 1;
+
 			}
 		}
 	}

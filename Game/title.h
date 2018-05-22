@@ -17,10 +17,12 @@ public:
 	/////////////////////////////////////////////
 	
 	prefab::CSpriteRender* m_spriteRender;
+	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
 	CVector3	m_position;		//座標。
 	CQuaternion m_rotation;	//回転。
 private:
 	bool m_isWaitFadeout = false;
 	Fade* m_fade = nullptr;
 	CFont m_font;
+
 };
