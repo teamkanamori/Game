@@ -49,6 +49,8 @@
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="Nessie.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
+    <ClCompile Include="error.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -68,6 +70,8 @@
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="Nessie.h" />
+    <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="error.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -227,6 +231,9 @@
     <CustomBuild Include="Assets\sound\Shutter.mp3">
       <Filter>Assets\sound</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\sound\error_1.wav">
+      <Filter>Assets\sound</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\fade.png">
@@ -239,6 +246,12 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\modelData\Finder.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\clear.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\error.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
   </ItemGroup>

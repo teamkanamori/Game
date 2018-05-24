@@ -9,6 +9,8 @@
 #include"banana.h"
 #include "ike.h"
 #include"finish.h"
+#include"GameCamera.h"
+#include"error.h"
 
 
 Game::Game()
@@ -18,8 +20,8 @@ Game::Game()
 
 Game::~Game()
 {
-
 	DeleteGO(m_spriteRender);
+	DeleteGO(m_gameCamera);
 }
 bool Game::Start()
 {	
@@ -42,6 +44,8 @@ bool Game::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/skydome.cmo");
 	m_skinModelRender->SetScale({0.1f, 0.1f, 0.1f });
+
+
 
 	
 		//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
@@ -67,35 +71,38 @@ bool Game::Start()
 	m_fade = FindGO<Fade>("Fade");
 	m_fade->StartFadeIn();
 	m_state = enState_FadeIn;
+	m_gameCamera = NewGO<GameCamera>(0);
 
-		NewGO<ike>(0, "ike");
+	NewGO<ike>(0, "ike");
 	picture* pic1 = NewGO<picture>(0, "picture");
 	pic1->m_position.y = 20.0f;
 	pic1->m_position.z = -40.0f;
 	pic1->m_renderTargetNo = 0;
 	picture* pic2 = NewGO<picture>(0, "picture");
-	pic2->m_position.y = 13.0f;
-	pic2->m_position.z = -40.0f;
-	pic2->m_renderTargetNo = 1;
+	pic2->m_position.y = 13.0f;        
+	pic2->m_position.z = -40.0f;                 
+	pic2->m_renderTargetNo = 1;                   
 	picture* pic3 = NewGO<picture>(0, "picture");
 	pic3->m_position.y = 6.0f;
 	pic3->m_position.z = -40.0f;
 	pic3->m_renderTargetNo = 2;
 
 	EventData eventDataTbl[] = {
-		{5.0f, enEventNo_Koneta1 },
-		{30.0f, enEventNo_Koneta2 },
-	    {60.0f, enEventNo_news },
+		{5.0f, enBigScoop, enEventNo_Koneta1 },
+		{30.0f, enMiddleScoop, enEventNo_Koneta2 },
+	    {60.0f, enSmallScoop, enEventNo_news },
 		/*{3.0f, enEventNo_Koneta1 },*/
 	};
 	m_sceneplayer.Init(eventDataTbl, sizeof(eventDataTbl) / sizeof(eventDataTbl[0]));
 	return true;
 }
+
 void Game::Update()
 {
 
 	
 	m_sceneplayer.Update();
+
 	m_camera.Update();
 
 	//m_position = { 0.0f,290.0f,200.0f };
@@ -127,11 +134,17 @@ void Game::Update()
 	m_sprite.Init(m_texture, 1280, 720);
 
 
+
+	
+
+
 	//ワールド行列の更新。
 	m_sprite.Update({ 0.0f,0.0f,0.0f }, CQuaternion::Identity, CVector3::One);
 	
 	m_spriteRender->SetPosition(m_position);*/
+
 }
+
 void Game::Render(CRenderContext& rc)
 {
 	m_camera.Render(rc);

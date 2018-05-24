@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Camera.h"
+#include "error.h"
 
 
 Camera::Camera()
@@ -10,6 +11,7 @@ Camera::Camera()
 Camera::~Camera()
 {
 }
+
 
 bool Camera::Start()
 {
@@ -56,13 +58,18 @@ void Camera::Update()
 			//エフェクトを再生。
 			effect->Play(L"effect/test.efk");
 			CVector3 emitPos = m_pos;
-			emitPos.x += 10.0f;
+			emitPos.x += 23.0f;
 			emitPos.y += 10.0f;
 			emitPos.z -= 30.0f;
 			effect->SetPosition(emitPos);
 		}
 		else {
-			MessageBox(NULL, "もうシャッターは押せません！", "警告", MB_OK);
+			NewGO<error>(0, "error");
+					
+			ss = NewGO<prefab::CSoundSource>(0);
+			ss->Init("sound/error_1.wav");
+			ss->Play(false);
+			//MessageBox(NULL, "もうシャッターは押せません！", "警告", MB_OK);
 		}
 		//シャッタが押されたフラグをtrueにする。
 	}
@@ -74,6 +81,8 @@ void Camera::Update()
 
 void Camera::Render(CRenderContext& rc)
 {
+
+
 	if (flag == 1) {
 		//これが撮影したテクスチャ。こいつをCSpriteのInit関数に渡してやればかけるはず
 		//renderTargets[0].GetRenderTargetSRV();

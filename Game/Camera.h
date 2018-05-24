@@ -2,7 +2,9 @@
 
 #include "tkEngine/graphics/effect/tkEffect.h"
 
-class Camera 
+class error;
+
+class Camera : public IGameObject
 {
 public:
 	Camera();
@@ -20,4 +22,3 @@ public:
 	prefab::CSoundSource* m_bgmSoundSource = nullptr;	//BGM用のサウンドソース。
 	CVector3 m_pos = CVector3::Zero;
 };
-

@@ -621,9 +621,11 @@
   <ItemGroup>
     <ClCompile Include="banana.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="error.cpp" />
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="finish.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
@@ -645,8 +647,10 @@
   <ItemGroup>
     <ClInclude Include="banana.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="error.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="finish.h" />
+    <ClInclude Include="GameCamera.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
@@ -783,10 +787,17 @@
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg" />
     <Image Include="Assets\modelData\gray.png" />
+    <ImageContentTask Include="Assets\sprite\error.png" />
+    <ImageContentTask Include="Assets\sprite\clear.png" />
     <ImageContentTask Include="Assets\modelData\Finder.png" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\sound\Shutter.mp3">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\error_1.wav">
       <FileType>Document</FileType>
     </CustomBuild>
   </ItemGroup>
