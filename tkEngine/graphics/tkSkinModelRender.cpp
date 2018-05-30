@@ -1,6 +1,6 @@
 /*!
- * @brief	スキンモデルレンダラー
- */
+* @brief	スキンモデルレンダラー
+*/
 #include "tkEngine/tkEnginePreCompile.h"
 #include "tkEngine/graphics/tkSkinModelRender.h"
 
@@ -28,22 +28,22 @@ namespace tkEngine {
 			}
 		}
 		/*!
-		 * @brief	更新前に呼ばれる関数。
-		 */
+		* @brief	更新前に呼ばれる関数。
+		*/
 		bool CSkinModelRender::Start()
 		{
 			return true;
 		}
 		/*!
-		 * @brief	更新。
-		 */
+		* @brief	更新。
+		*/
 		void CSkinModelRender::Update()
 		{
 			m_skinModel.Update(m_position, m_rotation, m_scale, m_enFbxUpAxis);
 		}
 		/*!
-		 * @brief	描画。
-		 */
+		* @brief	描画。
+		*/
 
 		void  CSkinModelRender::Render(CRenderContext& rc)
 		{
@@ -54,7 +54,7 @@ namespace tkEngine {
 				});
 			}
 			m_skinModel.Draw(rc);
-		
+
 			if (m_isSkinModelDrawOnRenderFunction == true) {
 				//モデルの描画はRender関数で行う。
 				m_skinModel.Draw(rc);

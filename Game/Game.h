@@ -6,7 +6,7 @@
 #include "Fade.h"
 
 class GameCamera;
-
+class picture;
 class Game : public IGameObject
 {
 public:
@@ -22,7 +22,8 @@ public:
 	void Render(CRenderContext& rc);
 	/*void OnDestroy();*/
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
-	prefab::CSpriteRender* m_spriteRender;
+	prefab::CSkinModelRender* m_skinModelRender2 = nullptr;
+	prefab::CSpriteRender* m_spriteRender = nullptr;
 	CAnimationClip m_animClip[enAnimClip_num];				//アニメーションクリップ。
 	CVector3 m_pos = CVector3::Zero;
 	sceneplayer m_sceneplayer;
@@ -47,11 +48,9 @@ public:
 	Camera m_camera;
 	CSprite m_sprite;				//スプライト。
 	CShaderResourceView m_texture;	//テクスチャ。
-
 	float time = 0;
+	std::vector<picture*>	m_picList;
 
-	sceneplayer sc;
-    
 };
 
 

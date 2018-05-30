@@ -35,7 +35,7 @@ private:
 	std::vector<int> m_invokeEventFlags;	//!<イベント起動フラグ。
 	float m_timer = 0.0f;					//!<タイマー。
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;
-	prefab::CSpriteRender* m_spriteRender;
+	prefab::CSpriteRender* m_spriteRender = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	int m_renderTargetNo = 0;
 

@@ -14,8 +14,9 @@ bool GameCamera::Start()
 	//カメラのニアクリップとファークリップを設定する。
 	MainCamera().SetNear(1.0f);
 	MainCamera().SetFar(10000.0f);
-	MainCamera().SetPosition({0,10,-50});
-	MainCamera().SetTarget({ 0,10,-60 });
+
+	MainCamera().SetPosition({ 0,5,0});
+	MainCamera().SetTarget({ 0,5,-10 });
 
 	return true;
 }
@@ -42,10 +43,10 @@ void GameCamera::Update()
 	float y = Pad(0).GetRStickYF();
 	//X軸周りの回転。
 	CVector3 axisX;
-	axisX.Cross(CVector3::Up,V);
+	axisX.Cross(CVector3::Up, V);
 	axisX.Normalize();
 	qRot.SetRotationDeg(axisX, -2.0f * y);
-	
+
 	CVector3 vBackup = V;
 
 	qRot.Multiply(V);
