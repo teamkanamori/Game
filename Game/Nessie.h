@@ -1,18 +1,15 @@
 #pragma once
 
 #include "tkEngine/graphics/effect/tkEffect.h"
+#include "NetaBase.h"
 
-class Nessie : public IGameObject
+class Nessie : public NetaBase
 {
 public:
 	Nessie();
 	~Nessie();
 	bool Start();
 	void Update();
-	void Render(CRenderContext& rc);
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
-
-	CVector3 m_pos = CVector3::Zero;
 	int NFlag = 0;
 };
-

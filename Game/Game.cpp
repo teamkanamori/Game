@@ -10,7 +10,6 @@
 #include "ike.h"
 #include"finish.h"
 #include"GameCamera.h"
-#include"error.h"
 
 
 Game::Game()
@@ -28,11 +27,11 @@ bool Game::Start()
 	m_camera.Start();
 
 	//ƒJƒƒ‰‚ğİ’èB
-	MainCamera().SetTarget({ 0.0f, 10.0f, 50.0f });
+	/*MainCamera().SetTarget({ 0.0f, 10.0f, 50.0f });
 	MainCamera().SetNear(0.1f);
 	MainCamera().SetFar(200.0f);
 	MainCamera().SetPosition({ 0.0f, 10.0f, -50.0f });
-	MainCamera().Update();
+	MainCamera().Update();*/
 
 	/*m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/unityChan.cmo");

@@ -3,6 +3,7 @@
 #include"banana.h"
 
 
+
 koneta1::koneta1()
 {
 }
@@ -14,14 +15,7 @@ koneta1::~koneta1()
 
 bool koneta1::Start()
 {
-	////カメラを設定。
-	MainCamera().SetTarget({ 0.0f, 10.0f, 0.0f });
-	MainCamera().SetNear(0.1f);
-	MainCamera().SetFar(100.0f);
-	MainCamera().SetPosition({ 30.0f, 10.0f, -50.0f });
-	MainCamera().Update();
-
-	m_position = { 0.0f,0.0f,-30.0f };
+	m_pos = { 0.0f,0.0f,-30.0f };
 
 	m_animClip[enAnimClip_idle].Load(L"animData/idle.tka");
 	m_animClip[enAnimClip_slip].Load(L"animData/slip.tka");
@@ -34,30 +28,21 @@ bool koneta1::Start()
 
 void koneta1::Update()
 {
-	m_position.z -= 0.1f;
+	m_pos.z -= 0.1f;
 	
-
 	//座標を設定。
-	m_skinModelRender->SetPosition(m_position);
-
+	m_skinModelRender->SetPosition(m_pos);
 
 	banana*gl = FindGO<banana>("banana");
 	CVector3 diff = CVector3::Zero;
-	diff.z = m_position.z - gl->m_position.z;
+	diff.z = m_pos.z - gl->m_position.z;
 	if (diff.Length() <= 1.0f)
 	{
 		if (flag == 1) {
 			return;
 		}
 			m_skinModelRender->PlayAnimation(enAnimClip_slip);
-			
 
 		flag = 1;
 	}
-	
-}
-
-void koneta1::Render(CRenderContext& rc)
-{
-
 }

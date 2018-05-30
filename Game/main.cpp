@@ -39,7 +39,6 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 		NewGO<Fade>(1, "Fade");
 		NewGO<title>(0, "title");
 		
-		
 		//ゲームループを実行。
 		Engine().RunGameLoop();
 	}

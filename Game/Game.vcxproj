@@ -631,6 +631,7 @@
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Nessie.cpp" />
+    <ClCompile Include="NetaBase.cpp" />
     <ClCompile Include="picture.cpp" />
     <ClCompile Include="sceneplayer.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -655,6 +656,7 @@
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
     <ClInclude Include="Nessie.h" />
+    <ClInclude Include="NetaBase.h" />
     <ClInclude Include="picture.h" />
     <ClInclude Include="sceneplayer.h" />
     <ClInclude Include="testscene.h" />

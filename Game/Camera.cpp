@@ -64,12 +64,12 @@ void Camera::Update()
 			effect->SetPosition(emitPos);
 		}
 		else {
-			NewGO<error>(0, "error");
-					
 			ss = NewGO<prefab::CSoundSource>(0);
 			ss->Init("sound/error_1.wav");
 			ss->Play(false);
-			//MessageBox(NULL, "もうシャッターは押せません！", "警告", MB_OK);
+
+			NewGO<error>(0, "error");
+
 		}
 		//シャッタが押されたフラグをtrueにする。
 	}

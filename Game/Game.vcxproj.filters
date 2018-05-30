@@ -51,6 +51,7 @@
     <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="error.cpp" />
+    <ClCompile Include="NetaBase.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -72,6 +73,7 @@
     <ClInclude Include="Nessie.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="error.h" />
+    <ClInclude Include="NetaBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">

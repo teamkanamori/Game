@@ -21,4 +21,5 @@ public:
 	int flag = 0;
 	prefab::CSoundSource* m_bgmSoundSource = nullptr;	//BGM用のサウンドソース。
 	CVector3 m_pos = CVector3::Zero;
+	
 };
