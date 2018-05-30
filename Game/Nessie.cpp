@@ -38,4 +38,6 @@ void Nessie::Update()
 	//if (m_pos.y <= 50.0f) {
 	//	m_pos.y += 1.0f;
 	//}
+
 }
+

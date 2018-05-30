@@ -10,6 +10,7 @@
 #include "ike.h"
 #include"finish.h"
 #include"GameCamera.h"
+#include"selectstage.h"
 
 
 Game::Game()
@@ -21,9 +22,10 @@ Game::~Game()
 {
 	DeleteGO(m_spriteRender);
 	DeleteGO(m_gameCamera);
+	DeleteGO(m_skinModelRender);
 }
 bool Game::Start()
-{	
+{
 	m_camera.Start();
 
 	//カメラを設定。
@@ -39,34 +41,30 @@ bool Game::Start()
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/stage1.cmo");
 	m_skinModelRender->SetScale({ 0.15f, 0.15f, 0.15f });
-   
+
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/skydome.cmo");
-	m_skinModelRender->SetScale({0.1f, 0.1f, 0.1f });
+	m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
 
 
 
-	
-		//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-		//m_skinModelRender->Init(L"modelData/news.cmo");
-		//m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
-		////newsはPostRenderで描画する。
-		//m_skinModelRender->SetModelDrawOnRenderFunction(false);
-		
-	
-	
+
+	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
+	//m_skinModelRender->Init(L"modelData/news.cmo");
+	//m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
+	////newsはPostRenderで描画する。
+	//m_skinModelRender->SetModelDrawOnRenderFunction(false);
+
+
+
 
 	//スプライトを初期化。
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
 	m_spriteRender->Init(L"sprite/Finder.dds", 1280, 720);
-	/*m_spriteRender->Init(L"sprite/sky.dds", 1280, 720);*/
-
 
 	time += GameTime().GetFrameDeltaTime();
-	/*NewGO<finish>(0, "finish");*/
 	NewGO<banana>(0, "banana");
 	NewGO<ike>(0, "ike");
-	NewGO<Nessie>(0, "Nessie");
 	m_fade = FindGO<Fade>("Fade");
 	m_fade->StartFadeIn();
 	m_state = enState_FadeIn;
@@ -78,19 +76,20 @@ bool Game::Start()
 	pic1->m_position.z = -40.0f;
 	pic1->m_renderTargetNo = 0;
 	picture* pic2 = NewGO<picture>(0, "picture");
-	pic2->m_position.y = 13.0f;        
-	pic2->m_position.z = -40.0f;                 
-	pic2->m_renderTargetNo = 1;                   
+	pic2->m_position.y = 13.0f;
+	pic2->m_position.z = -40.0f;
+	pic2->m_renderTargetNo = 1;
 	picture* pic3 = NewGO<picture>(0, "picture");
 	pic3->m_position.y = 6.0f;
 	pic3->m_position.z = -40.0f;
 	pic3->m_renderTargetNo = 2;
 
 	EventData eventDataTbl[] = {
-		{5.0f, enBigScoop, enEventNo_Koneta1 },
-		{30.0f, enMiddleScoop, enEventNo_Koneta2 },
-	    {60.0f, enSmallScoop, enEventNo_news },
-		/*{3.0f, enEventNo_Koneta1 },*/
+	{ 5.0f, enBigScoop, enEventNo_Koneta1 },
+	{ 30.0f, enMiddleScoop, enEventNo_Koneta2 },
+	{ 45.0f, enSmallScoop,enEventNo_Nessie },
+	{ 60.0f, enSmallScoop, enEventNo_news },
+	{ 65.0f, enSmallScoop, enEventNo_change },
 	};
 	m_sceneplayer.Init(eventDataTbl, sizeof(eventDataTbl) / sizeof(eventDataTbl[0]));
 	return true;
@@ -98,10 +97,7 @@ bool Game::Start()
 
 void Game::Update()
 {
-
-	
 	m_sceneplayer.Update();
-
 	m_camera.Update();
 
 	//m_position = { 0.0f,290.0f,200.0f };
@@ -128,25 +124,15 @@ void Game::Update()
 	}
 
 	}
-	/*
-	m_texture.CreateFromDDSTextureFromFile(L"sprite/Finder.dds");
-	m_sprite.Init(m_texture, 1280, 720);
-
-
-
-	
-
-
-	//ワールド行列の更新。
-	m_sprite.Update({ 0.0f,0.0f,0.0f }, CQuaternion::Identity, CVector3::One);
-	
-	m_spriteRender->SetPosition(m_position);*/
-
+	time += GameTime().GetFrameDeltaTime();
+	if (time > 10) {
+		DeleteGO(this);
+	}
 }
 
 void Game::Render(CRenderContext& rc)
 {
 	m_camera.Render(rc);
-	
+
 }
 

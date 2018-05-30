@@ -20,6 +20,7 @@ public:
 	bool Start();
 	void Update();
 	void Render(CRenderContext& rc);
+	/*void OnDestroy();*/
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
 	prefab::CSpriteRender* m_spriteRender;
 	CAnimationClip m_animClip[enAnimClip_num];				//アニメーションクリップ。
@@ -48,6 +49,8 @@ public:
 	CShaderResourceView m_texture;	//テクスチャ。
 
 	float time = 0;
+
+	sceneplayer sc;
     
 };
 
