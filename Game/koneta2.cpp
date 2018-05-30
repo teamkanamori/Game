@@ -10,6 +10,7 @@ koneta2::koneta2()
 
 koneta2::~koneta2()
 {
+	DeleteGO(m_skinModelRender);
 }
 
 bool koneta2::Start()
@@ -19,7 +20,7 @@ bool koneta2::Start()
 	m_animClip[enAnimClip_wakeup].Load(L"animData/wakeup.tka");
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/kokeruhito.cmo", m_animClip, enAnimClip_num);
-	m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
+	m_skinModelRender->SetScale({ 0.03f, 0.03f, 0.03f });
 
 	m_position = { -30.0f,0.0f,-30.0f };
 
@@ -49,6 +50,12 @@ void koneta2::Update()
 		m_position.y -= 5.0f;
 
 		flag = 1;
+	}
+
+	float time = 0;
+	time = GameTime().GetFrameDeltaTime();
+	if (time > 60 && Pad(0).IsPress(enButtonSelect)) {
+		DeleteGO(this);
 	}
 }
 

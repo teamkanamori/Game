@@ -51,6 +51,7 @@
     <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="GameCamera.cpp" />
     <ClCompile Include="selectstage.cpp" />
+    <ClCompile Include="gaya.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -72,6 +73,7 @@
     <ClInclude Include="Nessie.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="selectstage.h" />
+    <ClInclude Include="gaya.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -104,6 +106,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Title.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\island.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -240,6 +245,9 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\clear.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\new_title.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
   </ItemGroup>

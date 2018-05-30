@@ -21,11 +21,11 @@ bool title::Start()
 {
 	//スプライトを初期化。
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
-	m_spriteRender->Init(L"sprite/title.dds", 1280, 720);
+	m_spriteRender->Init(L"sprite/new_title.dds", 1280, 720);
 
-	//m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	//m_skinModelRender->Init(L"modelData/Title.cmo");
-	//m_skinModelRender->SetScale({ 0.3f, 0.3f, 0.3f });
+	/*m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
+	m_skinModelRender->Init(L"modelData/Title.cmo");
+	m_skinModelRender->SetScale({ 0.3f, 0.3f, 0.3f });*/
 
 	m_fade = FindGO<Fade>("Fade");
 		

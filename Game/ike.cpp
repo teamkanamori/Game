@@ -9,6 +9,7 @@ ike::ike()
 
 ike::~ike()
 {
+	DeleteGO(m_skinModelRender);
 }
 
 bool ike::Start()
@@ -22,9 +23,9 @@ bool ike::Start()
 
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/banana.cmo");
-	m_skinModelRender->SetScale({ 0.1f, 0.1f, 0.1f });
+	m_skinModelRender->SetScale({ 0.03f, 0.03f, 0.03f });
 	
-	m_position = { 20.0f,0.0f,-35.0f };
+	m_position = { 20.0f,-1.0f,-33.0f };
 
 	/*m_position.x -= 10.0f;
 	m_position.z = +20.0f;*/
@@ -39,6 +40,12 @@ void ike::Update()
 	m_position.z = +20.0f;*/
 	//À•W‚ðÝ’èB
 	m_skinModelRender->SetPosition(m_position);
+
+	float time = 0;
+	time = GameTime().GetFrameDeltaTime();
+	if (time > 60 && Pad(0).IsPress(enButtonSelect)) {
+		DeleteGO(this);
+	}
 }
 
 void ike::Render(CRenderContext& rc)

@@ -625,6 +625,7 @@
     <ClCompile Include="finish.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCamera.cpp" />
+    <ClCompile Include="gaya.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
@@ -650,6 +651,7 @@
     <ClInclude Include="Fade.h" />
     <ClInclude Include="finish.h" />
     <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="gaya.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
@@ -673,6 +675,7 @@
     <MeshContentTask Include="Assets\modelData\banana.FBX">
       <FileType>Document</FileType>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\island.FBX" />
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
     <MeshContentTask Include="Assets\modelData\Nessie.FBX" />
     <MeshContentTask Include="Assets\modelData\news.FBX" />
@@ -773,6 +776,7 @@
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg" />
     <Image Include="Assets\modelData\gray.png" />
+    <ImageContentTask Include="Assets\sprite\new_title.png" />
     <ImageContentTask Include="Assets\sprite\clear.png" />
     <ImageContentTask Include="Assets\modelData\Finder.png" />
   </ItemGroup>

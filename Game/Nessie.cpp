@@ -9,6 +9,7 @@ Nessie::Nessie()
 
 Nessie::~Nessie()
 {
+	DeleteGO(m_skinModelRender);
 }
 
 bool Nessie::Start()
@@ -29,10 +30,10 @@ bool Nessie::Start()
 
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/Nessie.cmo");
-	m_skinModelRender->SetScale({ 0.3f, 0.3f, 0.3f });
+	m_skinModelRender->SetScale({ 0.2f, 0.2f, 0.2f });
 
 
-	m_pos = { 0.0f,-20.0f,0.0f };
+	m_pos = { 40.0f,-20.0f,-50.0f };
 	return true;
 }
 void Nessie::Update()
@@ -55,6 +56,11 @@ void Nessie::Update()
 	//if (m_pos.y <= 50.0f) {
 	//	m_pos.y += 1.0f;
 	//}
+	float time = 0;
+	time = GameTime().GetFrameDeltaTime();
+	if (time > 60 && Pad(0).IsPress(enButtonSelect)) {
+		DeleteGO(this);
+	}
 }
 //void Nessie::Render(CRenderContext& rc)
 //{
