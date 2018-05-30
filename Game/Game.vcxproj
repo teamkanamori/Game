@@ -626,10 +626,12 @@
     <ClCompile Include="finish.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCamera.cpp" />
+    <ClCompile Include="gaya.cpp" />
     <ClCompile Include="ike.cpp" />
     <ClCompile Include="koneta1.cpp" />
     <ClCompile Include="koneta2.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="modoru.cpp" />
     <ClCompile Include="Nessie.cpp" />
     <ClCompile Include="NetaBase.cpp" />
     <ClCompile Include="picture.cpp" />
@@ -653,9 +655,11 @@
     <ClInclude Include="Fade.h" />
     <ClInclude Include="finish.h" />
     <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="gaya.h" />
     <ClInclude Include="ike.h" />
     <ClInclude Include="koneta1.h" />
     <ClInclude Include="koneta2.h" />
+    <ClInclude Include="modoru.h" />
     <ClInclude Include="Nessie.h" />
     <ClInclude Include="NetaBase.h" />
     <ClInclude Include="picture.h" />
@@ -677,6 +681,7 @@
     <MeshContentTask Include="Assets\modelData\banana.FBX">
       <FileType>Document</FileType>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\island.FBX" />
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
     <MeshContentTask Include="Assets\modelData\Nessie.FBX" />
     <MeshContentTask Include="Assets\modelData\news.FBX" />
@@ -791,12 +796,33 @@
     <ImageContentTask Include="Assets\sprite\sky.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Assets\modelData\ANEGRE.JPG" />
+    <ImageContentTask Include="Assets\sprite\new_title.png" />
+    <ImageContentTask Include="Assets\modelData\kabe.jpg" />
+    <ImageContentTask Include="Assets\modelData\kizi.jpg" />
+    <ImageContentTask Include="Assets\modelData\kizi2.jpg" />
+    <ImageContentTask Include="Assets\modelData\kizi3.jpg" />
+    <ImageContentTask Include="Assets\modelData\ANEGRE_R.jpg" />
+    <ImageContentTask Include="Assets\modelData\ANEGRE_W.jpg" />
+    <ImageContentTask Include="Assets\modelData\ASHWOOD.JPG" />
     <Image Include="Assets\modelData\banana.jpg" />
+    <Image Include="Assets\modelData\beachball.jpg" />
     <Image Include="Assets\modelData\bricks__001.jpg" />
     <Image Include="Assets\modelData\bricks__002x04.jpg" />
+    <ImageContentTask Include="Assets\modelData\Camerairasuto.png" />
     <Image Include="Assets\modelData\gray.png" />
+    <ImageContentTask Include="Assets\modelData\green.png" />
+    <ImageContentTask Include="Assets\modelData\palmera-low-uv2.png" />
+    <ImageContentTask Include="Assets\modelData\red.png" />
+    <ImageContentTask Include="Assets\modelData\rock.jpg" />
+    <ImageContentTask Include="Assets\modelData\sand.jpg" />
+    <ImageContentTask Include="Assets\modelData\sea2.jpg" />
+    <ImageContentTask Include="Assets\modelData\stripe.jpg" />
+    <ImageContentTask Include="Assets\modelData\stripe2.png" />
+    <ImageContentTask Include="Assets\modelData\suika.jpg" />
+    <ImageContentTask Include="Assets\modelData\uminoie.jpg" />
     <ImageContentTask Include="Assets\modelData\news.png" />
-    <Image Include="Assets\modelData\Select Stage.png" />
+    <ImageContentTask Include="Assets\modelData\Select Stage.png" />
     <ImageContentTask Include="Assets\sprite\key.png" />
     <ImageContentTask Include="Assets\sprite\key_gold.png" />
     <ImageContentTask Include="Assets\sprite\error.png" />
@@ -814,6 +840,7 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\modelData\Camerairasuto.mdp" />
     <None Include="Assets\modelData\Title.tks" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

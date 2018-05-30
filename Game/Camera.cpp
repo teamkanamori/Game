@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Camera.h"
 #include "error.h"
-
+#include "NetaBase.h"
 
 Camera::Camera()
 {
@@ -45,7 +45,35 @@ void Camera::Update()
 
 	if (Pad(0).IsTrigger(enButtonRB1)) {
 		if (shattercount < 3) {
-			timestanp[shattercount] = time;
+			shutterData[shattercount].time = time;
+			//小ネタ１の座標を記録。
+			NetaBase* neta = FindGO<NetaBase>("koneta1");
+			if (neta != nullptr) {
+				shutterData[shattercount].netaPos[0] = neta->GetPos();
+				shutterData[shattercount].isExistNeta[0] = true;
+			}
+			else {
+				shutterData[shattercount].isExistNeta[0] = false;
+			}
+			//小ネタ２の座標を記録。
+			neta = FindGO<NetaBase>("koneta2");
+			if (neta != nullptr) {
+				shutterData[shattercount].netaPos[1] = neta->GetPos();
+				shutterData[shattercount].isExistNeta[1] = true;
+			}
+			else {
+				shutterData[shattercount].isExistNeta[1] = false;
+			}
+			//大ネタの座標を記録。
+			neta = FindGO<NetaBase>("ooneta");
+			if (neta != nullptr) {
+				shutterData[shattercount].netaPos[2] = neta->GetPos();
+				shutterData[shattercount].isExistNeta[2] = true;
+			}
+			else {
+				shutterData[shattercount].isExistNeta[2] = false;
+			}
+			shutterData[shattercount].mView = MainCamera().GetViewMatrix();
 			shattercount++;
 			flag = 1;
 

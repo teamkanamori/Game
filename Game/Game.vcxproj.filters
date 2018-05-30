@@ -53,6 +53,8 @@
     <ClCompile Include="error.cpp" />
     <ClCompile Include="NetaBase.cpp" />
     <ClCompile Include="selectstage.cpp" />
+    <ClCompile Include="gaya.cpp" />
+    <ClCompile Include="modoru.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -76,6 +78,8 @@
     <ClInclude Include="error.h" />
     <ClInclude Include="NetaBase.h" />
     <ClInclude Include="selectstage.h" />
+    <ClInclude Include="gaya.h" />
+    <ClInclude Include="modoru.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -111,6 +115,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Title.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\island.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -273,6 +280,48 @@
     <ImageContentTask Include="Assets\modelData\news.png">
       <Filter>Assets\modelData</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\ANEGRE_R.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\Camerairasuto.png">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\green.png">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\palmera-low-uv2.png">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\Select Stage.png">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\stripe.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\stripe2.png">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\suika.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\uminoie.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\kabe.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\kizi.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\kizi2.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\kizi3.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\new_title.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg">
@@ -287,12 +336,36 @@
     <Image Include="Assets\modelData\bricks__002x04.jpg">
       <Filter>Assets\modelData</Filter>
     </Image>
-    <Image Include="Assets\modelData\Select Stage.png">
+    <Image Include="Assets\modelData\ANEGRE.JPG">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\ANEGRE_W.jpg">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\ASHWOOD.JPG">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\beachball.jpg">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\red.png">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\rock.jpg">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\sand.jpg">
+      <Filter>Assets\modelData</Filter>
+    </Image>
+    <Image Include="Assets\modelData\sea2.jpg">
       <Filter>Assets\modelData</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\modelData\Title.tks">
+      <Filter>Assets\modelData</Filter>
+    </None>
+    <None Include="Assets\modelData\Camerairasuto.mdp">
       <Filter>Assets\modelData</Filter>
     </None>
   </ItemGroup>

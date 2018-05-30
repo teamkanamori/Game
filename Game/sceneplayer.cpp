@@ -42,14 +42,27 @@ void sceneplayer::Update()
 		if (/*イベントが起動していなければ*/m_invokeEventFlags[i] == 0) {
 			if (m_timer > m_eventDatas[i].invokeTime) {
 				//イベントを起動する。
+				char netaName[256];
+				if (i == 0) {
+					//小ネタ　1
+					strcpy(netaName, "koneta1");
+				}
+				else if (i == 1) {
+					//小ネタ　２
+					strcpy(netaName, "koneta2");
+				}
+				else if (i == 2) {
+					//大ネタ。
+					strcpy(netaName, "ooneta");
+				}
 				if (m_eventDatas[i].eventNo == enEventNo_Koneta1) {
-				   NewGO<koneta1>(0, "koneta1");
+				   NewGO<koneta1>(0, netaName);
 				}
 				if (m_eventDatas[i].eventNo == enEventNo_Koneta2) {
-					NewGO<koneta2>(0, "koneta2");
+					NewGO<koneta2>(0, netaName);
 				}
 				if (m_eventDatas[i].eventNo == enEventNo_Nessie) {
-					NewGO<Nessie>(0, "Nessie");
+					NewGO<Nessie>(0, netaName);
 				}
 				if (m_eventDatas[i].eventNo == enEventNo_news) {
 					m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
@@ -67,9 +80,9 @@ void sceneplayer::Update()
 							if (material->EqualMaterialName(L"01 - Default") == true) {
 								//大ネタのイベントを探す。
 								//大ネタのイベントが見つかったら、カメラのタイムスタンプの配列を全部調べて
-								timestanp0 = scene->m_camera.timestanp[0];
-								timestanp1 = scene->m_camera.timestanp[1];
-								timestanp2 = scene->m_camera.timestanp[2];
+								timestanp0 = scene->m_camera.shutterData[0].time;
+								timestanp1 = scene->m_camera.shutterData[1].time;
+								timestanp2 = scene->m_camera.shutterData[2].time;
 
 								hantei0 = timestanp0 - m_eventDatas[2].invokeTime;
 								hantei1 = timestanp1 - m_eventDatas[2].invokeTime;
@@ -97,9 +110,9 @@ void sceneplayer::Update()
 							}
 
 							if (material->EqualMaterialName(L"02 - Default") == true) {
-								Smalltimestanp0 = scene->m_camera.timestanp[0];
-								Smalltimestanp1 = scene->m_camera.timestanp[1];
-								Smalltimestanp2 = scene->m_camera.timestanp[2];
+								Smalltimestanp0 = scene->m_camera.shutterData[0].time;
+								Smalltimestanp1 = scene->m_camera.shutterData[1].time;
+								Smalltimestanp2 = scene->m_camera.shutterData[2].time;
 								Smallhantei0 = Smalltimestanp0 - m_eventDatas[1].invokeTime;
 								Smallhantei1 = Smalltimestanp1 - m_eventDatas[1].invokeTime;
 								Smallhantei2 = Smalltimestanp2 - m_eventDatas[1].invokeTime;
@@ -121,9 +134,9 @@ void sceneplayer::Update()
 							}
 							if (material->EqualMaterialName(L"03 - Default") == true) {
 
-								midletimestanp0 = scene->m_camera.timestanp[0];
-								midletimestanp1 = scene->m_camera.timestanp[1];
-								midletimestanp2 = scene->m_camera.timestanp[2];
+								midletimestanp0 = scene->m_camera.shutterData[0].time;
+								midletimestanp1 = scene->m_camera.shutterData[1].time;
+								midletimestanp2 = scene->m_camera.shutterData[2].time;
 								midlehantei0 = midletimestanp0 - m_eventDatas[0].invokeTime;
 								midlehantei1 = midletimestanp1 - m_eventDatas[0].invokeTime;
 								midlehantei2 = midletimestanp2 - m_eventDatas[0].invokeTime;

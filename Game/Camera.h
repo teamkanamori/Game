@@ -7,6 +7,12 @@ class error;
 class Camera : public IGameObject
 {
 public:
+	struct SShutterData {
+		float time;				//シャッターが押された時間。
+		bool isExistNeta[3];	//ネタが発生しているかどうかのフラグ。
+		CVector3 netaPos[3];	//ネタの座標。
+		CMatrix mView;			//シャッターを押したときのカメラ行列。
+	};
 	Camera();
 	~Camera();
 	bool Start();
@@ -14,7 +20,8 @@ public:
 	void Render(CRenderContext& rc);
 
 	float time = 0;
-	float timestanp[3];
+	//float timestanp[3];
+	SShutterData shutterData[3];
 	int shattercount = 0;
 	CRenderTarget renderTargets[3];
 	CSprite m_sprite;	//シーンをペタッと張り付けるためのスプライト

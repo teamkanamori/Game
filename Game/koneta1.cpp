@@ -16,7 +16,7 @@ koneta1::~koneta1()
 
 bool koneta1::Start()
 {
-	m_position = { 0.0f,2.0f,-10.0f };
+	m_pos = { 0.0f,2.0f,-10.0f };
 
 	m_animClip[enAnimClip_idle].Load(L"animData/idle.tka");
 	m_animClip[enAnimClip_slip].Load(L"animData/slip.tka");
