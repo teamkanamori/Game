@@ -20,7 +20,7 @@ namespace tkEngine {
 			InitAnimation(animationClips, numAnimationClips);
 		}
 		void CSkinModelRender::InitAnimation(CAnimationClip* animationClips, int numAnimationClips)
-		{
+		{ 
 			m_animationClips = animationClips;
 			m_numAnimationClips = numAnimationClips;
 			if (m_animationClips != nullptr) {
@@ -53,19 +53,18 @@ namespace tkEngine {
 					material->SetOverrideDiffuseTexture(m_overrideDiffuseTexture);
 				});
 			}
-			m_skinModel.Draw(rc);
-
-			if (m_isSkinModelDrawOnRenderFunction == true) {
-				//モデルの描画はRender関数で行う。
+			if (m_isuse2Dcameraflag == 1) {
+				m_skinModel.Draw(rc, MainCamera2D().GetViewMatrix(), MainCamera2D().GetProjectionMatrix() );
+			}else {
 				m_skinModel.Draw(rc);
 			}
+
 		}
 
 		void CSkinModelRender::PostRender(CRenderContext& rc)
 		{
-			if (m_isSkinModelDrawOnRenderFunction == false) {
-				//モデルの描画はPostRender関数で行う。
-				m_skinModel.Draw(rc);
+			if (m_isuse2Dcameraflag == 1) {
+				m_skinModel.Draw(rc, MainCamera2D().GetViewMatrix(), MainCamera2D().GetProjectionMatrix());
 			}
 		}
 	}

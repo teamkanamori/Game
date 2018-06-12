@@ -29,6 +29,8 @@ bool koneta1::Start()
 
 void koneta1::Update()
 {
+	prefab::CSoundSource* ss;
+
 	m_pos.z -= 0.1f;
 	
 	//À•W‚ðÝ’èB
@@ -43,6 +45,10 @@ void koneta1::Update()
 			return;
 		}
 			m_skinModelRender->PlayAnimation(enAnimClip_slip);
+
+			ss = NewGO<prefab::CSoundSource>(0);
+			ss->Init("sound/kokeru.wav");
+			ss->Play(false);
 
 		flag = 1;
 	}

@@ -74,20 +74,20 @@ bool Game::Start()
 	NewGO<GameCamera>(0);
 
 	picture* pic1 = NewGO<picture>(0, "picture");
-	pic1->m_position.y = 20.0f;
-	pic1->m_position.z = -40.0f;
+	pic1->m_position.x = -600.0f;
+	pic1->m_position.y = 250.0f;
 	pic1->m_renderTargetNo = 0;
 	m_picList.push_back(pic1);
 
 	picture* pic2 = NewGO<picture>(0, "picture");
-	pic2->m_position.y = 13.0f;
-	pic2->m_position.z = -40.0f;
+	pic2->m_position.x = -600.0f;
+	pic2->m_position.y = 140.0f;
 	pic2->m_renderTargetNo = 1;
 	m_picList.push_back(pic2);
 
 	picture* pic3 = NewGO<picture>(0, "picture");
-	pic3->m_position.y = 6.0f;
-	pic3->m_position.z = -40.0f;
+	pic3->m_position.x = -600.0f;
+	pic3->m_position.y = 30.0f;
 	pic3->m_renderTargetNo = 2;
 	m_picList.push_back(pic3);
 
@@ -97,6 +97,7 @@ bool Game::Start()
 	{ 45.0f, enSmallScoop,enEventNo_Nessie },
 	{ 59.0f, enSmallScoop, enEventNo_news },
 	{ 60.0f, enSmallScoop, enEventNo_change },
+	{ 40.0f, enSmallScoop,enEventNo_zawa},
 	};
 	m_sceneplayer.Init(eventDataTbl, sizeof(eventDataTbl) / sizeof(eventDataTbl[0]));
 	return true;
@@ -105,7 +106,6 @@ bool Game::Start()
 
 void Game::Update()
 {
-	m_sceneplayer.Update();
 	m_camera.Update();
 
 	//m_position = { 0.0f,290.0f,200.0f };
@@ -135,17 +135,16 @@ void Game::Update()
 	time += GameTime().GetFrameDeltaTime();
 	
 	
-	if (Pad(0).IsPress(enButtonA))
-	{
-		NewGO<picture>(0, "picture");
-	
-	}
+	//if (Pad(0).IsPress(enButtonA))
+	//{
+	//	NewGO<picture>(0, "picture");
+	//
+	//}
 
 	if (Pad(0).IsPress(enButtonSelect)&&time > 60) {
 		NewGO<selectstage>(0, "selectstage");
 		DeleteGO(this);
 	}
-
 }
 
 void Game::Render(CRenderContext& rc)

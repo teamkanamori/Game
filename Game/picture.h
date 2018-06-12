@@ -1,4 +1,6 @@
 #pragma once
+class Game;
+
 class picture : public IGameObject
 {
 public:
@@ -15,7 +17,7 @@ public:
 	CVector3 m_position= CVector3::Zero;	//ç¿ïWÅB
 	int m_renderTargetNo = 0;
 	float time = 0;
-
+	Game* scene = nullptr;
 	std::vector<picture*>	m_picList;
 };
 

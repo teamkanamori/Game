@@ -42,7 +42,7 @@ namespace tkEngine {
 			*@param[in]	interpolateTime		補完時間(単位：秒)
 			*/
 			void PlayAnimation(int animNo, float interpolateTime = 0.0f)
-			{
+			{ 
 				m_animation.Play(animNo, interpolateTime);
 			}
 			/*!
@@ -57,7 +57,7 @@ namespace tkEngine {
 			*@param[in]	flag	シャドウキャスターのフラグ。
 			*/
 			void SetShadowCasterFlag(bool flag)
-			{
+			{ 
 				m_skinModel.SetShadowCasterFlag(flag);
 			}
 			/*!
@@ -145,9 +145,12 @@ namespace tkEngine {
 			* @brief	アニメーションの初期化。
 			*/
 			void InitAnimation(CAnimationClip* animationClips, int numAnimationClips);
-			void SetModelDrawOnRenderFunction(bool flag) {
-				m_isSkinModelDrawOnRenderFunction = flag;
-			}
+			
+			void Set2Dcamera(int c)
+			{
+				m_isuse2Dcameraflag = c;
+			};
+
 		private:
 			CAnimationClip * m_animationClips = nullptr;			//!<アニメーションクリップ。
 			int							m_numAnimationClips = 0;			//!<アニメーションクリップの数。
@@ -161,6 +164,7 @@ namespace tkEngine {
 			const std::wstring			m_filePath;							//!<ファイルパス。
 			bool m_isSkinModelDrawOnRenderFunction = true;
 			ID3D11ShaderResourceView*	m_overrideDiffuseTexture = nullptr;
+			bool m_isuse2Dcameraflag = false;
 		};
 	}
 }

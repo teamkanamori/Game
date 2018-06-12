@@ -647,6 +647,7 @@
     </ClCompile>
     <ClCompile Include="testscene.cpp" />
     <ClCompile Include="title.cpp" />
+    <ClCompile Include="zawa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="banana.h" />
@@ -667,6 +668,7 @@
     <ClInclude Include="selectstage.h" />
     <ClInclude Include="testscene.h" />
     <ClInclude Include="title.h" />
+    <ClInclude Include="zawa.h" />
     <CustomBuild Include="Assets\shader\LightingFunction.h" />
     <CustomBuild Include="Assets\shader\modelCB.h" />
     <CustomBuild Include="Assets\shader\modelSRV.h" />
@@ -681,6 +683,13 @@
     <MeshContentTask Include="Assets\modelData\banana.FBX">
       <FileType>Document</FileType>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara.fbx" />
+    <MeshContentTask Include="Assets\modelData\chara1.FBX" />
+    <MeshContentTask Include="Assets\modelData\chara2.FBX" />
+    <MeshContentTask Include="Assets\modelData\chara3.FBX" />
+    <MeshContentTask Include="Assets\modelData\chara4.FBX" />
+    <MeshContentTask Include="Assets\modelData\chara5.FBX" />
+    <MeshContentTask Include="Assets\modelData\chara6.FBX" />
     <MeshContentTask Include="Assets\modelData\island.FBX" />
     <MeshContentTask Include="Assets\modelData\kokeruhito.fbx" />
     <MeshContentTask Include="Assets\modelData\Nessie.FBX" />
@@ -796,7 +805,10 @@
     <ImageContentTask Include="Assets\sprite\sky.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ImageContentTask Include="Assets\modelData\Ag.jpg" />
     <Image Include="Assets\modelData\ANEGRE.JPG" />
+    <ImageContentTask Include="Assets\modelData\tetu.jpg" />
+    <ImageContentTask Include="Assets\sprite\zawazawa.png" />
     <ImageContentTask Include="Assets\sprite\new_title.png" />
     <ImageContentTask Include="Assets\modelData\kabe.jpg" />
     <ImageContentTask Include="Assets\modelData\kizi.jpg" />
@@ -810,6 +822,12 @@
     <Image Include="Assets\modelData\bricks__001.jpg" />
     <Image Include="Assets\modelData\bricks__002x04.jpg" />
     <ImageContentTask Include="Assets\modelData\Camerairasuto.png" />
+    <ImageContentTask Include="Assets\modelData\chara1.png" />
+    <ImageContentTask Include="Assets\modelData\chara2.png" />
+    <ImageContentTask Include="Assets\modelData\chara3.png" />
+    <ImageContentTask Include="Assets\modelData\chara4.png" />
+    <Image Include="Assets\modelData\chara5.png" />
+    <Image Include="Assets\modelData\chara6.png" />
     <Image Include="Assets\modelData\gray.png" />
     <ImageContentTask Include="Assets\modelData\green.png" />
     <ImageContentTask Include="Assets\modelData\palmera-low-uv2.png" />
@@ -840,8 +858,60 @@
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <CustomBuild Include="Assets\animData\chara1.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara6.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara2.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara3.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara4.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara5.walk.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara5.slip.tka">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="Assets\modelData\Camerairasuto.mdp" />
+    <CustomBuild Include="Assets\modelData\chara.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara1.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara2.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara3.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara6.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara4.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara5.tks">
+      <FileType>Document</FileType>
+    </CustomBuild>
     <None Include="Assets\modelData\Title.tks" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\toire.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\kokeru.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

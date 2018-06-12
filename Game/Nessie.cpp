@@ -23,6 +23,8 @@ bool Nessie::Start()
 }
 void Nessie::Update()
 {
+	prefab::CSoundSource* ss;
+
 	if(NFlag == 1){
 		m_pos.y -= 0.5f;
 	}
@@ -32,6 +34,10 @@ void Nessie::Update()
 	if (m_pos.y > -1.5f) {
 		NFlag = 1;
 	}
+
+	ss = NewGO<prefab::CSoundSource>(0);
+	ss->Init("sound/toire.wav");
+	ss->Play(false);
 
 	//À•W‚ðÝ’èB
 	m_skinModelRender->SetPosition(m_pos);

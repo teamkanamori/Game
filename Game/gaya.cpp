@@ -16,20 +16,26 @@ gaya::~gaya()
 
 bool gaya::Start() {
 	
+	m_animClip[enAnimClip_walk].Load(L"animData/chara1.walk.tka");
+	m_animClip[enAnimClip_walk].SetLoopFlag(true);
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender->Init(L"modelData/unityChan.cmo");
+	m_skinModelRender->Init(L"modelData/chara1.cmo",m_animClip,enAnimClip_num);
 	m_skinModelRender->SetScale({ 0.03f, 0.03f, 0.03f });
 	m_position = { 20.0f,1.8f,-10.0f };
 	m_skinModelRender->SetPosition(m_position);
 
+	m_animClip[enAnimClip_walk].Load(L"animData/chara5.walk.tka");
+	m_animClip[enAnimClip_walk].SetLoopFlag(true);
 	m_skinModelRender2 = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender2->Init(L"modelData/unityChan.cmo");
+	m_skinModelRender2->Init(L"modelData/chara5.cmo",m_animClip,enAnimClip_num);
 	m_skinModelRender2->SetScale({ 0.03f, 0.03f, 0.03f });
 	m_position2 = { -10.0f,1.8f,5.0f };
 	m_skinModelRender2->SetPosition(m_position2);
 
+	m_animClip[enAnimClip_walk].Load(L"animData/chara2.walk.tka");
+	m_animClip[enAnimClip_walk].SetLoopFlag(true);
 	m_skinModelRender3 = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelRender3->Init(L"modelData/unityChan.cmo");
+	m_skinModelRender3->Init(L"modelData/chara2.cmo");
 	m_skinModelRender3->SetScale({ 0.03f, 0.03f, 0.03f });
 	m_position3 = { 13.0f,4.7f,11.0f };
 	m_skinModelRender3->SetPosition(m_position3);
@@ -59,10 +65,13 @@ void gaya::Update()
 			m_rotation.SetRotationDeg(CVector3::AxisY, -90.0f);
 			m_rotation.Multiply(qRot);
 		}
+
+		m_rotation.SetRotationDeg(CVector3::AxisX, 90.0f);
 		m_skinModelRender->SetRotation(m_rotation);
 		m_skinModelRender->SetPosition(m_position);
 
-		m_rotation2.SetRotationDeg(CVector3::AxisX, -90.0f);
+
+		m_rotation2.SetRotationDeg(CVector3::AxisX, 180.0f);
 	
 		m_skinModelRender2->SetRotation(m_rotation2);
 		m_skinModelRender2->SetPosition(m_position2);

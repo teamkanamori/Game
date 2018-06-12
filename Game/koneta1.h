@@ -15,6 +15,7 @@ public:
 		enAnimClip_num,			//アニメーションデータの数。
 	};
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
+	prefab::CSoundSource* m_bgmSoundSource = nullptr;	//BGM用のサウンドソース。
 	CAnimationClip m_animClip[enAnimClip_num];				//アニメーションクリップ。
 	int flag = 0;
 };

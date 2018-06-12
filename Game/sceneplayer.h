@@ -8,6 +8,7 @@ enum EnEventNo {
 	enEventNo_Nessie,
 	enEventNo_news,
 	enEventNo_change,
+	enEventNo_zawa
 };
 enum EnScoopLevel {
 	enBigScoop,		//‘åƒlƒ^,

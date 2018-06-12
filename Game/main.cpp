@@ -6,6 +6,15 @@
 #include "Fade.h"
 #include "title.h"
 
+class Hoge {
+private:
+	int m_value;
+public:
+	void SetValue(int v)
+	{
+		m_value = v;
+	}
+};
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);

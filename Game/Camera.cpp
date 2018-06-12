@@ -81,15 +81,15 @@ void Camera::Update()
 			ss->Init("sound/Shutter.mp3");
 			ss->Play(false);
 
-			//エフェクトを作成。
-			prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
-			//エフェクトを再生。
-			effect->Play(L"effect/test.efk");
-			CVector3 emitPos = m_pos;
-			emitPos.x += 23.0f;
-			emitPos.y += 10.0f;
-			emitPos.z -= 30.0f;
-			effect->SetPosition(emitPos);
+			////エフェクトを作成。
+			//prefab::CEffect* effect = NewGO<prefab::CEffect>(0);
+			////エフェクトを再生。
+			//effect->Play(L"effect/test.efk");
+			//CVector3 emitPos = m_pos;
+			//emitPos.x += 23.0f;
+			//emitPos.y += 10.0f;
+			//emitPos.z -= 30.0f;
+			//effect->SetPosition(emitPos);
 		}
 		else {
 			ss = NewGO<prefab::CSoundSource>(0);

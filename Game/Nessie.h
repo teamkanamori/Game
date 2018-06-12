@@ -12,5 +12,6 @@ public:
 	void Update();
 
 	prefab::CSkinModelRender* m_skinModelRender = nullptr;	//スキンモデルレンダラー。
+	prefab::CSoundSource* m_bgmSoundSource = nullptr;	//BGM用のサウンドソース。
 	int NFlag = 0;
 };

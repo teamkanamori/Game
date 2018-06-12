@@ -55,6 +55,7 @@
     <ClCompile Include="selectstage.cpp" />
     <ClCompile Include="gaya.cpp" />
     <ClCompile Include="modoru.cpp" />
+    <ClCompile Include="zawa.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -80,6 +81,7 @@
     <ClInclude Include="selectstage.h" />
     <ClInclude Include="gaya.h" />
     <ClInclude Include="modoru.h" />
+    <ClInclude Include="zawa.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -118,6 +120,27 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\island.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara1.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara2.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara3.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara4.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara5.FBX">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\chara6.FBX">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -251,6 +274,54 @@
     <CustomBuild Include="Assets\sound\error_1.wav">
       <Filter>Assets\sound</Filter>
     </CustomBuild>
+    <CustomBuild Include="Assets\sound\toire.wav">
+      <Filter>Assets\sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\sound\kokeru.wav">
+      <Filter>Assets\sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara1.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara2.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara3.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara6.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara6.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara2.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara3.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara4.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara4.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara1.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara5.walk.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\modelData\chara5.tks">
+      <Filter>Assets\modelData</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\animData\chara5.slip.tka">
+      <Filter>Assets\animData</Filter>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\fade.png">
@@ -322,6 +393,35 @@
     <ImageContentTask Include="Assets\sprite\new_title.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\ANEGRE_W.jpg">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\ASHWOOD.JPG">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\red.png" />
+    <ImageContentTask Include="Assets\modelData\rock.jpg">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\sand.jpg">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\sea2.jpg">
+      <Filter>Resource Files</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\zawazawa.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\chara1.png" />
+    <ImageContentTask Include="Assets\modelData\chara2.png" />
+    <ImageContentTask Include="Assets\modelData\chara3.png" />
+    <ImageContentTask Include="Assets\modelData\chara4.png" />
+    <ImageContentTask Include="Assets\modelData\Ag.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
+    <ImageContentTask Include="Assets\modelData\tetu.jpg">
+      <Filter>Assets\modelData</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\modelData\bricks__001.jpg">
@@ -339,25 +439,13 @@
     <Image Include="Assets\modelData\ANEGRE.JPG">
       <Filter>Assets\modelData</Filter>
     </Image>
-    <Image Include="Assets\modelData\ANEGRE_W.jpg">
-      <Filter>Assets\modelData</Filter>
-    </Image>
-    <Image Include="Assets\modelData\ASHWOOD.JPG">
-      <Filter>Assets\modelData</Filter>
-    </Image>
     <Image Include="Assets\modelData\beachball.jpg">
       <Filter>Assets\modelData</Filter>
     </Image>
-    <Image Include="Assets\modelData\red.png">
+    <Image Include="Assets\modelData\chara5.png">
       <Filter>Assets\modelData</Filter>
     </Image>
-    <Image Include="Assets\modelData\rock.jpg">
-      <Filter>Assets\modelData</Filter>
-    </Image>
-    <Image Include="Assets\modelData\sand.jpg">
-      <Filter>Assets\modelData</Filter>
-    </Image>
-    <Image Include="Assets\modelData\sea2.jpg">
+    <Image Include="Assets\modelData\chara6.png">
       <Filter>Assets\modelData</Filter>
     </Image>
   </ItemGroup>

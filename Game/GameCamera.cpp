@@ -33,7 +33,7 @@ void GameCamera::Update()
 	float x = Pad(0).GetRStickXF();
 	//Y軸周りの回転クォータニオンを求める。
 	CQuaternion qRot;
-	qRot.SetRotationDeg(CVector3::AxisY, 2.0f * x);
+	qRot.SetRotationDeg(CVector3::AxisY, 6.0f * x);
 	//V = V * qRot
 	qRot.Multiply(V);
 
@@ -45,7 +45,7 @@ void GameCamera::Update()
 	CVector3 axisX;
 	axisX.Cross(CVector3::Up, V);
 	axisX.Normalize();
-	qRot.SetRotationDeg(axisX, -2.0f * y);
+	qRot.SetRotationDeg(axisX, -6.0f * y);
 
 	CVector3 vBackup = V;
 

@@ -5,6 +5,7 @@
 #include"Nessie.h"
 #include "Game.h"
 #include "selectstage.h"
+#include "zawa.h"
 
 					
 
@@ -64,6 +65,9 @@ void sceneplayer::Update()
 				if (m_eventDatas[i].eventNo == enEventNo_Nessie) {
 					NewGO<Nessie>(0, netaName);
 				}
+				if (m_eventDatas[i].eventNo == enEventNo_zawa) {
+					NewGO<zawa>(0, netaName);
+				}
 				if (m_eventDatas[i].eventNo == enEventNo_news) {
 					m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 					m_skinModelRender->Init(L"modelData/news.cmo");
@@ -87,6 +91,7 @@ void sceneplayer::Update()
 								hantei0 = timestanp0 - m_eventDatas[2].invokeTime;
 								hantei1 = timestanp1 - m_eventDatas[2].invokeTime;
 								hantei2 = timestanp2 - m_eventDatas[2].invokeTime;
+
 								//その差が一定値以下なら、大ネタ写真を差し替える。
 								if (hantei0 >= 0 && hantei0 < 5) {
 										material->SetDiffuseTexture(scene->m_camera.renderTargets[0].GetRenderTargetSRV().GetBody());
@@ -161,7 +166,7 @@ void sceneplayer::Update()
 				//if (m_eventDatas[i].eventNo == enEventNo_change) {
 				//	//イベントの起動フラグを1にする。
 				//}
-				
+
 				m_invokeEventFlags[i] = 1;
 	
 		/*		if (m_invokeEventFlags[0] != 0) {
